@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="../css/estilos.css">
-   
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById('password');
+            var toggleButton = document.getElementById('togglePassword');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleButton.textContent = 'Ocultar';
+            } else {
+                passwordField.type = 'password';
+                toggleButton.textContent = 'Mostrar';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
