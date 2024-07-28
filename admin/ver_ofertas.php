@@ -180,12 +180,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
         <div class="contenedor-principal">
             <section class="filtros">
                 <form method="get" action="ver_ofertas.php">
-                    <input type="text" name="search" placeholder="Buscar por empresa o título" value="<?php echo htmlspecialchars($search); ?>">
+                    <input type="text" name="search" placeholder="Buscar por estudiante o egresado" value="<?php echo htmlspecialchars($search); ?>">
                     <select name="categoria">
                         <option value="">Todas las Categorías</option>
-                        <option value="Tiempo Completo" <?php if ($categoria == 'Tiempo Completo') echo 'selected'; ?>>Tiempo Completo</option>
-                        <option value="Medio Tiempo" <?php if ($categoria == 'Medio Tiempo') echo 'selected'; ?>>Medio Tiempo</option>
-                        <option value="Freelance" <?php if ($categoria == 'Freelance') echo 'selected'; ?>>Freelance</option>
+                        <option value="Estudiante" <?php if ($categoria == 'Estudiante') echo 'selected'; ?>>Estudiante</option>
+                        <option value="Egresado" <?php if ($categoria == 'Egresado') echo 'selected'; ?>>Egresado</option>
                     </select>
                     <select name="estado">
                         <option value="">Todos los Estados</option>
