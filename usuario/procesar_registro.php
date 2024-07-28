@@ -42,9 +42,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $target_dir = "../imagenes/";
     $target_file = $target_dir . basename($imagen);
     
-    //? Si no hay errores, registramos al usaurio
+    //? Si no hay errores, proceder a registrar el usuario
     if (empty($errores)) {
-       
+        if (move_uploaded_file($_FILES['imagen']['tmp_name'], $target_file)) {
+            $hash_password = password_hash($password, PASSWORD_BCRYPT);
+            $sql = "INSERT INTO usuarios (nombre, email, contraseña, imagen, estado, rol) VALUES ('$nombre', '$email', '$hash_password', '$imagen', '$estado', '$rol')";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "<script>
+                    window.onload = function() {
+                        if (window.opener && !window.opener.closed) {
+                            window.opener.mostrarMensaje('Registro exitoso. Redirigiendo a inicio de sesión...');
+                            window.close();
+                        } else {
+                            document.write('<h1>Registro exitoso. Redirigiendo a inicio de sesión...</h1>');
+                            setTimeout(function() {
+                                window.location.href = 'login.php';
+                            }, 500);
+                        }
+                    }
+                </script>";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        } else {
+            echo "Error al subir la imagen.";
+        }
     } else {
         //? Mostrar errores en el formulario
         include 'registro.php';
