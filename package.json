@@ -1,0 +1,11 @@
+{
+  "name": "proyectofinal-tecnologiaweb2",
+  "version": "1.0.0",
+  "description": "proyectoFinal - Sistema de practicas profesionales para estudiantes y engresados",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesus Zeballos, Daniela Fernandez, Emmanuel Andrade, Clareth Tejerina",
+  "license": "ISC"
+}
