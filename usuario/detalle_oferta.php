@@ -73,7 +73,23 @@ $ya_postulado = $result_postulado->num_rows > 0;
             <?php endif; ?>
         </div>
 
-       
+        <?php if (count($otras_ofertas) > 0): ?>
+        <div class="otras-ofertas">
+            <h2>Otras ofertas de <?php echo htmlspecialchars($empresa); ?></h2>
+            <?php foreach ($otras_ofertas as $otra_oferta): ?>
+                <div class="oferta" onclick="window.location.href='detalle_oferta.php?id=<?php echo $otra_oferta['id']; ?>'">
+                    <img src="../imagenes/<?php echo htmlspecialchars($otra_oferta['imagen']); ?>" alt="Imagen de la Empresa">
+                    <div>
+                        <h2><?php echo htmlspecialchars($otra_oferta['titulo']); ?></h2>
+                        <p><?php echo htmlspecialchars($otra_oferta['descripcion']); ?></p>
+                        <p><strong>Categoría:</strong> <?php echo htmlspecialchars($otra_oferta['categoria']); ?></p>
+                        <p><strong>Empresa:</strong> <?php echo htmlspecialchars($otra_oferta['empresa']); ?></p>
+                        <p><strong>Contacto:</strong> <?php echo htmlspecialchars($otra_oferta['email_contacto']); ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
 
         <!-- Modal de confirmación -->
         <div id="modalConfirm" class="modal">
