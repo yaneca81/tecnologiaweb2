@@ -52,7 +52,15 @@ $tipo_usuario = isset($_GET['tipo_usuario']) ? $_GET['tipo_usuario'] : '';
         <div class="dashboard">
             <h1>Bienvenido, <?php echo htmlspecialchars($nombre); ?></h1>
             <div class="busqueda">
-               
+                <form method="get" id="searchForm" action="dashboard_usuario.php">
+                    <input type="text" name="search" id="search" placeholder="Buscar por título, empresa o tipo" value="<?php echo htmlspecialchars($search); ?>">
+                    <select name="tipo_usuario" id="tipo_usuario">
+                        <option value="">Todos</option>
+                        <option value="Estudiante" <?php if ($tipo_usuario == 'Estudiante') echo 'selected'; ?>>Estudiante</option>
+                        <option value="Egresado" <?php if ($tipo_usuario == 'Egresado') echo 'selected'; ?>>Egresado</option>
+                    </select>
+                    <button type="submit">Buscar</button>
+                </form>
             </div>
 
             <h1>Ofertas disponibles:</h1>
