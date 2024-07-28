@@ -194,7 +194,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
                     <button type="submit" class="btn">Filtrar</button>
                 </form>
             </section>
-            <h1>Ofertas de Empleo</h1>
+            <h1>Ofertas para los practicantes</h1>
             <section class="ofertas-container">
                 <?php if (count($ofertas) > 0): ?>
                     <?php foreach ($ofertas as $oferta): ?>
