@@ -25,7 +25,35 @@ if ($result->num_rows > 0) {
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 $tipo_usuario = isset($_GET['tipo_usuario']) ? $_GET['tipo_usuario'] : '';
 
+if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
+    $sql_ofertas = "SELECT * FROM ofertas WHERE activa = 1 AND (titulo LIKE '%$search%' OR empresa LIKE '%$search%')";
+    if ($tipo_usuario != '') {
+        $sql_ofertas .= " AND categoria='$tipo_usuario'";
+    }
 
+    $result_ofertas = $conn->query($sql_ofertas);
+    $ofertas = [];
+
+    if ($result_ofertas->num_rows > 0) {
+        while ($row = $result_ofertas->fetch_assoc()) {
+            $oferta_id = $row['id'];
+            $sql_postulacion = "SELECT * FROM postulaciones WHERE id_usuario='$usuario_id' AND id_oferta='$oferta_id'";
+            $result_postulacion = $conn->query($sql_postulacion);
+
+            if ($result_postulacion->num_rows > 0) {
+                $row['postulado'] = true;
+            } else {
+                $row['postulado'] = false;
+            }
+
+            $ofertas[] = $row;
+        }
+    }
+
+    header('Content-Type: application/json');
+    echo json_encode($ofertas);
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
