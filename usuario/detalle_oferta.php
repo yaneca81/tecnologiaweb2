@@ -31,7 +31,11 @@ if ($result_otras_ofertas->num_rows > 0) {
     }
 }
 
+//? Verificar si el usuario ya está postulado
+$sql_postulado = "SELECT * FROM postulaciones WHERE id_usuario = $usuario_id AND id_oferta = $oferta_id";
+$result_postulado = $conn->query($sql_postulado);
 
+$ya_postulado = $result_postulado->num_rows > 0;
 ?>
 <!DOCTYPE html>
 <html lang="es">
