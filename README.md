@@ -5,3 +5,5 @@ Tecnologias a aplicar
 * css
 * php
 * base de datos mysql
+
+## 30% de avance
