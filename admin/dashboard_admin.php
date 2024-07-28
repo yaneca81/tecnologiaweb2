@@ -92,7 +92,7 @@ if ($result_ofertas->num_rows > 0) {
     <main>
         <section class="contenido-principal">
             <h1>Bienvenido, <?php echo htmlspecialchars($nombre); ?></h1>
-            <p>Desde aquí puedes gestionar las ofertas de empleo.</p>
+            <p>Desde aquí puedes gestionar las practicas ofertadas</p>
             <div class="acciones">
                 <a href="crear_oferta.html" class="btn">Crear Nueva Oferta</a>
                 <a href="ver_ofertas.php" class="btn">Gestionar Ofertas Existentes</a>
@@ -113,8 +113,8 @@ if ($result_ofertas->num_rows > 0) {
             <?php endif; ?>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Sistema de Anuncios de Empleo - Programación en tegnoligia web 2 grupo 7</p>
-    </footer>
+     <?php
+        include("../footer.php");
+     ?>
 </body>
 </html>
