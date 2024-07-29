@@ -6,8 +6,7 @@ Tecnologias a aplicar
 * php
 * javaScript
 * base de datos mysql
-## 45% de avance
+## 55% de avance
 ## proximos cambios
-* agregar mis postulaciones
-* agregar acerca de
+* agregar vr perfil
 * Dashboard
