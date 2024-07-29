@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script>
         function togglePasswordVisibility() {
             var passwordField = document.getElementById('password');
@@ -21,7 +22,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Anuncios de Empleo</div>
+            <div class="logo">Ingresa con tu cuenta</div>
             <ul>
                 <li><a href="../index.php">Inicio</a></li>
                 <li><a href="../contacto.php">Contacto</a></li>
@@ -40,7 +41,7 @@
                 <label for="password">Contraseña:</label>
                 <div style="position: relative;">
                     <input type="password" id="password" name="password" style="width: calc(100% - 100px);">
-                    <button type="button" id="togglePassword" onclick="togglePasswordVisibility()" style="width: 80px; position: absolute; right: 0;">Mostrar</button>
+                    <button type="button" id="togglePassword" onclick="togglePasswordVisibility()" style="width: 80px; position: absolute; right: 1; ">Mostrar</button>
                 </div>
                 <div id="error-password" style="color:red;"><?= $errores['password'] ?? '' ?></div>
                 
@@ -49,6 +50,7 @@
             <p>¿No tienes una cuenta? <a href="registro.php?rol=usuario">Regístrate</a></p>
         </section>
     </main>
+    <br><br><br><br>
     <?php include("../footer.php"); ?>
 </body>
 </html>

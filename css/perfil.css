@@ -2,7 +2,7 @@
     max-width: 700px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: #A1C1BE; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -24,16 +24,18 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #59554E; 
     border-radius: 5px;
     box-sizing: border-box;
+    background: #E2E3D9; 
+    color: #59554E; 
 }
 
 .perfil select {
-    -webkit-appearance: none; /* Remove default styles for WebKit browsers */
-    -moz-appearance: none; /* Remove default styles for Firefox */
-    appearance: none; /* Remove default styles for other browsers */
-    background: #fff url('../imagenes/arrow-down.svg') no-repeat right center;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    background: #E2E3D9 url('../imagenes/arrow-down.svg') no-repeat right center; 
     background-size: 16px;
 }
 
@@ -51,25 +53,25 @@
 .perfil .password-container button {
     width: 70px;
     padding: 10px;
-    background: #ff6600;
-    color: #fff;
+    background: #283937;
+    color: #BDC4B4; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .perfil .password-container button:hover {
-    background: #e65c00;
+    background: #567b78; 
 }
 
 .perfil button {
-    background: #ff6600;
-    color: #fff;
+    background: #283937; 
+    color: #BDC4B4; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .perfil button:hover {
-    background: #e65c00;
+    background: #567b78; 
 }

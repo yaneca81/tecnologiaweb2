@@ -49,19 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO usuarios (nombre, email, contraseña, imagen, estado, rol) VALUES ('$nombre', '$email', '$hash_password', '$imagen', '$estado', '$rol')";
 
             if ($conn->query($sql) === TRUE) {
-                echo "<script>
-                    window.onload = function() {
-                        if (window.opener && !window.opener.closed) {
-                            window.opener.mostrarMensaje('Registro exitoso. Redirigiendo a inicio de sesión...');
-                            window.close();
-                        } else {
-                            document.write('<h1>Registro exitoso. Redirigiendo a inicio de sesión...</h1>');
-                            setTimeout(function() {
-                                window.location.href = 'login.php';
-                            }, 500);
-                        }
-                    }
-                </script>";
+                header("Location: registro.php?success=true");
+                exit();
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }

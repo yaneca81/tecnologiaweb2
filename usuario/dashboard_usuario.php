@@ -62,12 +62,13 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     <title>Dashboard del Usuario</title>
     <link rel="stylesheet" href="../css/dashboard_usuario.css">
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="../js/dashboard_usuario.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Anuncios de Empleo</div>
+            <div class="logo">Anuncios para los Practicantes</div>
             <ul class="perfil">
                 <li><a href="dashboard_usuario.php">Inicio</a></li>
                 <li><a href="postulaciones.php">Mis Postulaciones</a></li>
@@ -87,7 +88,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
                         <option value="Estudiante" <?php if ($tipo_usuario == 'Estudiante') echo 'selected'; ?>>Estudiante</option>
                         <option value="Egresado" <?php if ($tipo_usuario == 'Egresado') echo 'selected'; ?>>Egresado</option>
                     </select>
-                    <button type="submit">Buscar</button>
+                    <button type="submit" id="buscar">Buscar</button>
                 </form>
             </div>
 
@@ -97,9 +98,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
             </div>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Sistema de Anuncios de Empleo - Programación WEB II - Juan Carlos de León</p>
-    </footer>
+
 
     <script>
         document.getElementById('search').addEventListener('input', function() {
