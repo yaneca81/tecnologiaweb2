@@ -1,22 +1,20 @@
 * {
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #FFFFFF; 
+    color: #59554E; 
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: #A1C1BE; 
+    color: #59554E; 
     padding: 10px 0;
 }
-
-
 
 header nav {
     display: flex;
@@ -42,14 +40,14 @@ header ul li {
 }
 
 header ul li a {
-    color: #fff;
+    color: #59554E; 
     text-decoration: none;
     padding: 5px 10px;
     transition: background 0.3s;
 }
 
 header ul li a:hover {
-    background: #575757;
+    background: #E2E3D9; 
     border-radius: 5px;
 }
 
@@ -60,14 +58,14 @@ header ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #59554E; 
 }
 
 .contenido-hero {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(232 225 225 / 50%);
     border-radius: 10px;
 }
 
@@ -83,8 +81,8 @@ header ul li a:hover {
 
 .botones-hero .btn {
     display: inline-block;
-    background: #ff6600;
-    color: #fff;
+    background: #A1C1BE; 
+    color: #59554E; 
     padding: 10px 20px;
     margin: 5px;
     text-decoration: none;
@@ -93,14 +91,14 @@ header ul li a:hover {
 }
 
 .botones-hero .btn:hover {
-    background: #e65c00;
+    background: #E2E3D9; 
 }
 
 .caracteristicas {
     display: flex;
     justify-content: space-around;
     padding: 40px 20px;
-    background: #fff;
+    background: #F3F4E5; 
 }
 
 .caracteristica {
@@ -110,49 +108,51 @@ header ul li a:hover {
 
 .caracteristica h2 {
     margin-bottom: 20px;
-    color: #ff6600;
+    color: #59554E; 
 }
 
 .caracteristica p {
     font-size: 16px;
 }
 
-
-
 .formulario {
+    margin-top: 100px;
     max-width: 500px;
-    margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: #F3F4E5; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+    margin-bottom: 40px;
 }
 
 .formulario h1 {
     margin-bottom: 20px;
+    color: #59554E; 
 }
 
 .formulario label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-   
+    color: #59554E; 
 }
 
 .formulario input,
 .formulario textarea,
 .formulario select {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #A1C1BE; 
     border-radius: 5px;
 }
 
+
+
 .formulario button {
-    background: #ff6600;
-    color: #fff;
+    margin-left: 10px;
+    background: #A1C1BE; 
+    color: #59554E; 
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -161,7 +161,7 @@ header ul li a:hover {
 }
 
 .formulario button:hover {
-    background: #e65c00;
+    background: #E2E3D9; 
 }
 
 .contenido-principal {
@@ -172,16 +172,18 @@ header ul li a:hover {
 
 .contenido-principal h1 {
     margin-bottom: 20px;
+    color: #59554E; 
 }
 
 .contenido-principal p {
     margin-bottom: 20px;
+    color: #59554E; 
 }
 
 .acciones .btn {
     display: inline-block;
-    background: #ff6600;
-    color: #fff;
+    background: #A1C1BE; 
+    color: #59554E; 
     padding: 10px 20px;
     margin: 5px;
     text-decoration: none;
@@ -190,7 +192,7 @@ header ul li a:hover {
 }
 
 .acciones .btn:hover {
-    background: #e65c00;
+    background: #E2E3D9; 
 }
 
 .ofertas {
@@ -199,7 +201,7 @@ header ul li a:hover {
 }
 
 .oferta {
-    background: #fff;
+    background: #F3F4E5; 
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -208,16 +210,17 @@ header ul li a:hover {
 
 .oferta h2 {
     margin-bottom: 10px;
-    color: #ff6600;
+    color: #59554E; 
 }
 
 .oferta p {
     margin-bottom: 10px;
+    color: #59554E; 
 }
 
 .oferta button {
-    background: #ff6600;
-    color: #fff;
+    background: #A1C1BE; 
+    color: #59554E; 
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -226,29 +229,31 @@ header ul li a:hover {
 }
 
 .oferta button:hover {
-    background: #e65c00;
+    background: #E2E3D9; 
 }
+
 .sobre-nosotros {
+    margin-top: 90px;
     max-width: 800px;
-    margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: #F3F4E5; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sobre-nosotros h1 {
     margin-bottom: 20px;
-    color: #ff6600;
+    color: #59554E; 
 }
 
 .sobre-nosotros p {
     margin-bottom: 20px;
     font-size: 16px;
+    color: #59554E; 
 }
 
 .formulario p a {
-    color: #ff6600;
+    color: #59554E; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -256,6 +261,7 @@ header ul li a:hover {
 .formulario p a:hover {
     text-decoration: underline;
 }
+
 /* Estilos para el modal */
 .modal {
     display: none;
@@ -270,13 +276,13 @@ header ul li a:hover {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #F3F4E5; 
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #A1C1BE; 
     width: 80%;
     max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     text-align: center;
 }
@@ -284,6 +290,7 @@ header ul li a:hover {
 .modal-header {
     font-size: 18px;
     margin-bottom: 15px;
+    color: #59554E; 
 }
 
 .modal-buttons {
@@ -300,11 +307,19 @@ header ul li a:hover {
 }
 
 .modal-buttons .confirm {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #A1C1BE; 
+    color: #59554E; 
+}
+
+.modal-buttons .confirm:hover {
+    background-color: #E2E3D9; 
 }
 
 .modal-buttons .cancel {
-    background-color: #f44336;
-    color: white;
+    background-color: #567b78; 
+    color: #BDC4B4; 
+}
+
+.modal-buttons .cancel:hover {
+    background-color: #59554E; 
 }
