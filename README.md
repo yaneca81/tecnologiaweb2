@@ -6,7 +6,7 @@ Tecnologias a aplicar
 * php
 * base de datos mysql
 ## 45% de avance
-# proximos cambios
+## proximos cambios
 * agregar mis postulaciones
 * agregar acerca de
 * Dashboard
