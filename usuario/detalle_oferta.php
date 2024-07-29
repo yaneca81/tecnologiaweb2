@@ -73,6 +73,7 @@ $ya_postulado = $result_postulado->num_rows > 0;
                 <button id="postularme" data-id="<?php echo $oferta['id']; ?>">Postularme</button>
             <?php endif; ?>
         </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <?php if (count($otras_ofertas) > 0): ?>
         <div class="otras-ofertas">
