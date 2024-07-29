@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-07-2024 a las 03:59:55
--- Versión del servidor: 8.3.0
--- Versión de PHP: 8.2.18
+-- Tiempo de generación: 29-07-2024 a las 22:09:03
+-- Versión del servidor: 8.2.0
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,14 +39,18 @@ CREATE TABLE IF NOT EXISTS `ofertas` (
   `activa` tinyint(1) DEFAULT '1',
   `fecha_creacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `ofertas`
 --
 
 INSERT INTO `ofertas` (`id`, `titulo`, `descripcion`, `categoria`, `empresa`, `email_contacto`, `imagen`, `activa`, `fecha_creacion`) VALUES
-(4, 'PROGRAMADOR', 'programacion en java ', 'Medio Tiempo', 'sybercorp', 'contacto@gmail.com', 'java.png', 1, '2024-07-27 03:47:46');
+(1, 'Programador Junior Java', 'Desarrollo de aplicaciones en Java.', 'Estudiante', 'TecnoSoft', 'contacto@tecnosoft.com', 'imagen1.png', 1, '2024-07-29 22:08:49'),
+(2, 'Analista de Sistemas', 'Análisis y diseño de sistemas informáticos.', 'Estudiante', 'CAS', 'contacto@cas.com', 'imagen2.png', 1, '2024-07-29 22:08:49'),
+(3, 'Desarrollador Backend', 'Desarrollo de APIs y servicios backend.', 'Egresado', 'Innovatech', 'contacto@innovatech.com', 'imagen3.png', 1, '2024-07-29 22:08:49'),
+(4, 'Programador Junior Java', 'Desarrollo de aplicaciones en Java.', 'Estudiante', 'Netsolutions', 'info@netsolutions.com', 'imagen4.png', 1, '2024-07-29 22:08:49')
+
 
 -- --------------------------------------------------------
 
@@ -64,13 +68,6 @@ CREATE TABLE IF NOT EXISTS `postulaciones` (
   KEY `id_usuario` (`id_usuario`),
   KEY `id_oferta` (`id_oferta`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `postulaciones`
---
-
-INSERT INTO `postulaciones` (`id`, `id_usuario`, `id_oferta`, `fecha_creacion`) VALUES
-(1, 3, 1, '2024-07-27 02:51:41');
 
 -- --------------------------------------------------------
 
@@ -97,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `contraseña`, `imagen`, `estado`, `rol`, `fecha_creacion`) VALUES
-(1, 'grupo7', 'grupo7@gmail.com', 'admin123', NULL, 'Estudiante', 'admin', '2024-07-27 :42:35');
+(1, 'grupo7', 'grupo7@gmail.com', 'admin123', NULL, 'Estudiante', 'admin', '0000-00-00 00:00:00');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
