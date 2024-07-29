@@ -14,10 +14,6 @@ CREATE TABLE `empleo` (
   PRIMARY KEY (`id`)
 );
 
---creacion de un empleo test
-insert into empleo (titulo, descripcion, categoria) values ('Test', 'este es la descripcion de test', 'test');
-select * from empleo;
-
 -- --------------------------------------------------------
 
 --
@@ -57,10 +53,29 @@ CREATE TABLE `usuario` (
   PRIMARY KEY (`id`, `user`)
 );
 
+-- creacion del usuario admin
+-- user : admin
+-- password: admin
+insert into usuario (user, password, nombre, apellido, correo, telefono, direccion, foto, rol) values ('admin', '$2y$10$wHPAaj8oKnpYFEpfDbG9xeb/WpnpEy80yS0EiN9lhNoJ4xJ8nLXeq', 'admin', 'admin', 'admin@empleos.com', 00000000, 'admin', '../uploads/usuarios/sinFoto.png', 'admin');
 
--- creacion de un usuario admin
-insert into usuario (user, password, nombre, apellido, correo, telefono, direccion, foto, rol) values ('admin', '$2y$10$wHPAaj8oKnpYFEpfDbG9xeb/WpnpEy80yS0EiN9lhNoJ4xJ8nLXeq', 'admin', 'admin', 'admin@empleos.com', 00000000, 'admin', 'Sin foto', 'admin');
 
---proximos cambios a la base de datos
--- 1. añadir un campo a postulacion para subir archivos pdf
--- 2. añadir un campo varchar para foto, en la tabla empleo para poder hacer mas diseño
+-- modificacion de la tabla empleo y postulacion
+-- campo foto en empleo
+-- campo archivo en postilacion
+-- Añadir columna 'foto' a la tabla 'empleo'
+
+
+-- revisar los inserts antes de actualizar a github
+
+
+ALTER TABLE `empleo`
+ADD COLUMN `foto` varchar(255) NOT NULL;
+
+-- Añadir columna 'archivo' a la tabla 'postulacion'
+ALTER TABLE `postulacion`
+ADD COLUMN `archivo` varchar(255) NOT NULL AFTER `fecha`;
+
+ALTER TABLE `postulacion`
+ADD COLUMN `mensaje` varchar(220) NOT NULL AFTER `archivo`;
+
+-- base de datos actualizada

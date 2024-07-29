@@ -4,7 +4,7 @@ include '../logic/auth.php';
 
 // Redirigir si ya ha iniciado sesión
 if (isset($_COOKIE['user_id'])) {
-    header('Location: ../pages/index.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -44,19 +44,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
-    <style>
-        .error { color: red; }
-    </style>
+    <link rel="stylesheet" href="../assets/css/error.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
-    <h1>Iniciar Sesión</h1>
     <form method="POST" action="">
+        <h1>Iniciar Sesión</h1>
         <label for="usernameOrEmail">Usuario o Correo:</label>
         <input type="text" id="usernameOrEmail" name="usernameOrEmail" value="<?php echo htmlspecialchars($usernameOrEmail); ?>" required>
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($password); ?>" required>
         <?php if (isset($errors['login'])): ?><div class="error"><?php echo $errors['login']; ?></div><?php endif; ?>
         <button type="submit">Iniciar Sesión</button>
+        <div class="register-link">
+            <span>¿No tienes cuenta? </span><a href="register.php">Crear cuenta</a>
+        </div>
+        <div class="register-link">
+            <span>Ver sin inicar sesion </span><a href="index.php">Home</a>
+        </div>
     </form>
 </body>
 </html>
