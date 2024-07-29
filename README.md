@@ -4,6 +4,7 @@ Tecnologias a aplicar
 * html
 * css
 * php
+* javaScript
 * base de datos mysql
 ## 45% de avance
 ## proximos cambios
