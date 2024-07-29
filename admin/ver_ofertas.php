@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ver Ofertas de Empleo</title>
+    <title>Ver Ofertas</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <style>
         .contenedor-principal {
@@ -126,17 +126,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
             color: #fff;
             border: none;
             border-radius: 5px;
-            padding: 10px 20px;
+            padding: 5px;
             cursor: pointer;
             transition: background 0.3s;
             margin-right: 10px;
             display: inline-block;
+            text-decoration: none !important;
         }
         .btn-activo {
-            background: #ff6600;
+            
+            background: #A1C1BE !important;
         }
         .btn-activo:hover {
-            background: #e65c00;
+            background: #e65c00 !important;
         }
         .btn-inactivo {
             background: #ccc;
@@ -146,14 +148,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
             background: #bbb;
         }
         .btn-delete {
-            background: #ff0000;
+            background: red !important;
+            color: white !important;
         }
         .btn-delete:hover {
-            background: #cc0000;
+            background: #ff6600 !important;
         }
         .botones {
-            display: flex;
-            justify-content: space-between;
+            display: block;
+            text-align: center;
+            
+        }
+
+        button{
+            background-color: #A1C1BE !important; 
         }
     </style>
     <script>
@@ -170,7 +178,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
             <div class="logo">Panel de Administrador</div>
             <ul>
                 <li><a href="dashboard_admin.php">Inicio</a></li>
-                <li><a href="crear_oferta.html">Crear Oferta</a></li>
+                <li><a href="crear_oferta.php">Crear Oferta</a></li>
                 <li><a href="ver_ofertas.php">Ver Ofertas</a></li>
                 <li><a href="logout.php">Cerrar Sesión</a></li>
             </ul>
@@ -210,7 +218,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
                                     <input type="hidden" name="estado_actual" value="<?php echo $oferta['activa']; ?>">
                                     <button type="submit" class="btn <?php echo $oferta['activa'] ? 'btn-activo' : 'btn-inactivo'; ?>"><?php echo $oferta['activa'] ? 'Deshabilitar' : 'Habilitar'; ?></button>
                                 </form>
-                                <a href="editar_oferta.php?id=<?php echo $oferta['id']; ?>" class="btn btn-activo">Editar</a>
+                                <button style=" margin-right:5px;"><a href="editar_oferta.php?id=<?php echo $oferta['id']; ?>" class="btn-activo" style="text-decoration: none; color: black;">Editar</a></button>
                                 <form id="delete-form-<?php echo $oferta['id']; ?>" method="post" action="ver_ofertas.php" style="display:inline;">
                                     <input type="hidden" name="delete_id" value="<?php echo $oferta['id']; ?>">
                                     <button type="button" class="btn btn-delete" onclick="confirmarEliminacion(<?php echo $oferta['id']; ?>)">Eliminar</button>

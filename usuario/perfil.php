@@ -27,15 +27,16 @@ if ($result->num_rows > 0) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Perfil de Usuario</title>
+    <title>Perfil del Estudiante</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="../js/perfil.js" defer></script>   
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Anuncios de Empleo</div>
+            <div class="logo">Perfil</div>
             <ul>
                 <li><a href="dashboard_usuario.php">Inicio</a></li>
                 <li><a href="postulaciones.php">Postulaciones</a></li>
@@ -45,7 +46,7 @@ if ($result->num_rows > 0) {
     </header>
     <main>
         <div class="perfil">
-            <h1>Perfil de Usuario</h1>
+            <h1>Perfil del Estudiante</h1>
             <img src="../imagenes/<?php echo htmlspecialchars($imagen); ?>" alt="Foto de Perfil">
             <form action="procesar_perfil.php" method="post" enctype="multipart/form-data">
                 <label for="nombre">Nombre:</label>

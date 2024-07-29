@@ -103,7 +103,7 @@ if ($result_postulaciones->num_rows > 0) {
             <div class="logo">Panel de Administrador</div>
             <ul>
                 <li><a href="dashboard_admin.php">Inicio</a></li>
-                <li><a href="crear_oferta.html">Crear Oferta</a></li>
+                <li><a href="crear_oferta.php">Crear Oferta</a></li>
                 <li><a href="ver_ofertas.php">Ver Ofertas</a></li>
                 <li><a href="logout.php">Cerrar Sesión</a></li>
             </ul>

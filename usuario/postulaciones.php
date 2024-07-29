@@ -40,15 +40,16 @@ if ($result_postulaciones->num_rows > 0) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mis Postulaciones</title>
+    <title>Postulaciones del Practicante</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/postulaciones.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="../js/postulaciones.js" defer></script>   
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Anuncios de Empleo</div>
+            <div class="logo">Postulaciones del Practicante</div>
             <ul class="perfil">
                 <li><a href="dashboard_usuario.php">Inicio</a></li>
                 <li><a href="postulaciones.php">Postulaciones</a></li>
@@ -76,8 +77,9 @@ if ($result_postulaciones->num_rows > 0) {
             <?php endif; ?>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Sistema de Anuncios de Empleo - Programación WEB II - Juan Carlos de León</p>
-    </footer>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <?php
+        include("../footer.php");
+     ?>
 </body>
 </html>

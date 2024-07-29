@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Sistema de Prácticas Profesionales</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Anuncios de Practicas</div>
+            <div class="logo">Prácticas Profesionales</div>
             <ul>
                 <li><a href="contacto.php">Contacto</a></li>
                 <li><a href="sobre_nosotros.php">Sobre Nosotros</a></li>

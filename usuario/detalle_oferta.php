@@ -44,6 +44,7 @@ $ya_postulado = $result_postulado->num_rows > 0;
     <title>Detalles de la Oferta</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/detalle_oferta.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="../js/detalle_oferta.js" defer></script>   
 </head>
 <body>
