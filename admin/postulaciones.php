@@ -38,64 +38,9 @@ if ($result_postulaciones->num_rows > 0) {
     <meta charset="UTF-8">
     <title>Detalles de la Oferta de Empleo</title>
     <link rel="stylesheet" href="../css/estilos.css">
-    <style>
-        .detalles-oferta {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            align-content: center;
-        }
-        .detalles-oferta img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .detalles-oferta p {
-            margin: 10px 0;
-        }
-        .postulaciones {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 150px;
-        }
-        .postulacion {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .postulacion img {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-        .btn {
-            background: #ff6600;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background 0.3s;
-            text-align: center;
-            display: block;
-            margin: 20px auto;
-            width: 200px;
-        }
-        .btn:hover {
-            background: #e65c00;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/postulacion_admin.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+
 </head>
 <body>
     <header>
@@ -110,7 +55,7 @@ if ($result_postulaciones->num_rows > 0) {
         </nav>
     </header>
     <main>
-        <div class="detalles-oferta">
+        <div class="detalles-oferta  animate__animated animate__backInLeft">
             <h1><?php echo htmlspecialchars($oferta['titulo']); ?></h1>
             <img src="../imagenes/<?php echo htmlspecialchars($oferta['imagen']); ?>" alt="Logo de Empresa">
             <p><strong>Descripción:</strong> <?php echo htmlspecialchars($oferta['descripcion']); ?></p>

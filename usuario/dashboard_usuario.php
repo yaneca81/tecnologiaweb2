@@ -63,9 +63,17 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     <link rel="stylesheet" href="../css/dashboard_usuario.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
     <script src="../js/dashboard_usuario.js" defer></script>
+
+    <style>
+        .animate__animated.animate__shakeX {
+        --animate-duration: 5s;
+        --animate-delay: 0.9s;
+        }
+    </style>
 </head>
-<body>
+<body class="animate__animated animate__lightSpeedInLeft">
     <header>
         <nav>
             <div class="logo">Anuncios para los Practicantes</div>
@@ -125,7 +133,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
                             const ofertaElement = document.createElement('div');
                             ofertaElement.classList.add('oferta');
                             ofertaElement.innerHTML = `
-                                <div class="oferta" onclick="window.location.href='detalle_oferta.php?id=${oferta.id}'">
+                                <div class="oferta  animate__animated animate__shakeX" onclick="window.location.href='detalle_oferta.php?id=${oferta.id}'">
                                     <img src="../imagenes/${oferta.imagen}" alt="Imagen de la Empresa">
                                     <div>
                                         <h2>${oferta.titulo}</h2>

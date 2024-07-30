@@ -5,8 +5,9 @@
     <title>Sobre Nosotros - Prácticas Profesionales</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
 </head>
-<body>
+<body class="animate__animated animate__fadeIn">
     <header>
         <nav>
             <div class="logo">Prácticas Profesionales</div>

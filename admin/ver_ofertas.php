@@ -65,105 +65,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
     <meta charset="UTF-8">
     <title>Ver Ofertas</title>
     <link rel="stylesheet" href="../css/estilos.css">
-    <style>
-        .contenedor-principal {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .filtros {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .filtros input[type="text"],
-        .filtros select {
-            padding: 10px;
-            width: 100%;
-            max-width: 600px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .filtros button {
-            padding: 10px 20px;
-            background: #ff6600;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .filtros button:hover {
-            background: #e65c00;
-        }
-        .ofertas-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .oferta {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: calc(50% - 20px);
-            box-sizing: border-box;
-        }
-        .oferta h2 {
-            margin-top: 0;
-        }
-        .oferta p {
-            margin: 10px 0;
-        }
-        .btn {
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-            margin-right: 10px;
-            display: inline-block;
-            text-decoration: none !important;
-        }
-        .btn-activo {
-            
-            background: #A1C1BE !important;
-        }
-        .btn-activo:hover {
-            background: #e65c00 !important;
-        }
-        .btn-inactivo {
-            background: #ccc;
-            color: #666;
-        }
-        .btn-inactivo:hover {
-            background: #bbb;
-        }
-        .btn-delete {
-            background: red !important;
-            color: white !important;
-        }
-        .btn-delete:hover {
-            background: #ff6600 !important;
-        }
-        .botones {
-            display: block;
-            text-align: center;
-            
-        }
+    <link rel="stylesheet" href="../css/ver_ofertas_admin.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
 
-        button{
-            background-color: #A1C1BE !important; 
-        }
-    </style>
     <script>
         function confirmarEliminacion(oferta_id) {
             if (confirm('¿Está seguro que desea eliminar esta oferta?')) {
@@ -185,8 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
         </nav>
     </header>
     <main>
-        <div class="contenedor-principal">
-            <section class="filtros">
+        <div class="contenedor-principal animate__animated animate__bounceInDown">
+            <section class="filtros" >
                 <form method="get" action="ver_ofertas.php">
                     <input type="text" name="search" placeholder="Buscar por estudiante o egresado" value="<?php echo htmlspecialchars($search); ?>">
                     <select name="categoria">
@@ -206,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
             <section class="ofertas-container">
                 <?php if (count($ofertas) > 0): ?>
                     <?php foreach ($ofertas as $oferta): ?>
-                        <div class="oferta">
+                        <div class="oferta animate__animated animate__bounceInDown">
                             <h2><?php echo htmlspecialchars($oferta['titulo']); ?></h2>
                             <p><?php echo htmlspecialchars($oferta['descripcion']); ?></p>
                             <p><strong>Categoría:</strong> <?php echo htmlspecialchars($oferta['categoria']); ?></p>

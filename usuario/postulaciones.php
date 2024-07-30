@@ -44,6 +44,7 @@ if ($result_postulaciones->num_rows > 0) {
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/postulaciones.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
     <script src="../js/postulaciones.js" defer></script>   
 </head>
 <body>
@@ -59,7 +60,7 @@ if ($result_postulaciones->num_rows > 0) {
         </nav>
     </header>
     <main>
-        <div class="postulaciones">
+        <div class="postulaciones animate__animated animate__zoomInDown">
             <h1>Mis Postulaciones</h1>
             <?php if (count($postulaciones) > 0): ?>
                 <?php foreach ($postulaciones as $postulacion): ?>

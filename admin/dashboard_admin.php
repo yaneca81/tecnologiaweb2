@@ -38,10 +38,16 @@ if ($result_ofertas->num_rows > 0) {
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/dashboard_administrador.css">
-
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+    <style>
+        .animate__animated.animate__shakeY {
+        --animate-duration: 5s;
+        --animate-delay: 0.9s;
+        }
+    </style>
 
 </head>
-<body>
+<body class="animate__animated animate__fadeInLeft">
     <header>
         <nav>
             <div class="logo">Panel de Administrador</div>
@@ -65,7 +71,7 @@ if ($result_ofertas->num_rows > 0) {
         <section class="contenido-ofertas">
             <?php if (count($ofertas) > 0): ?>
                 <?php foreach ($ofertas as $oferta): ?>
-                    <div class="oferta-card" onclick="window.location.href='postulaciones.php?id=<?php echo $oferta['id']; ?>'">
+                    <div class="oferta-card animate__animated animate__shakeY" onclick="window.location.href='postulaciones.php?id=<?php echo $oferta['id']; ?>'">
                         <img src="../imagenes/<?php echo htmlspecialchars($oferta['imagen']); ?>" alt="Logo de Empresa">
                         <p><strong><?php echo htmlspecialchars($oferta['titulo']); ?></strong></p>
                         <p><?php echo htmlspecialchars($oferta['empresa']); ?></p>

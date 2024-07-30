@@ -62,39 +62,7 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <title>Editar Oferta de Empleo</title>
     <link rel="stylesheet" href="../css/estilos.css">
-    <style>
-        .formulario {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .formulario input[type="text"],
-        .formulario textarea,
-        .formulario select,
-        .formulario input[type="file"],
-        .formulario button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .formulario button {
-            background: #ff6600;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .formulario button:hover {
-            background: #e65c00;
-        }
-    </style>
+
 </head>
 <body>
     <header>

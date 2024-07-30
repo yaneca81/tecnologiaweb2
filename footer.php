@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
 </head>
 <body>
     
 <footer>  
-  <div class="container-footer">  
+  <div class="container-footer animate__animated animate__fadeIn">  
    <div class="row">  
     <div class="col-md-4">  
       <p>Busca tu práctica profesional y aviéntate a la vida laboral</p>  

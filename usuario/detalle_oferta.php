@@ -45,6 +45,13 @@ $ya_postulado = $result_postulado->num_rows > 0;
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/detalle_oferta.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+    <style>
+        .animate__animated.animate__shakeX {
+        --animate-duration: 5s;
+        --animate-delay: 0.9s;
+        }
+    </style>
     <script src="../js/detalle_oferta.js" defer></script>   
 </head>
 <body>
@@ -59,7 +66,7 @@ $ya_postulado = $result_postulado->num_rows > 0;
         </nav>
     </header>
     <main>
-        <div class="detalles-oferta">
+        <div class="detalles-oferta animate__animated animate__backInLeft">
             <h1><?php echo htmlspecialchars($oferta['titulo']); ?></h1>
             <img src="../imagenes/<?php echo htmlspecialchars($oferta['imagen']); ?>" alt="Imagen de la Empresa">
             <p><?php echo htmlspecialchars($oferta['descripcion']); ?></p>
@@ -73,13 +80,13 @@ $ya_postulado = $result_postulado->num_rows > 0;
                 <button id="postularme" data-id="<?php echo $oferta['id']; ?>">Postularme</button>
             <?php endif; ?>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
 
         <?php if (count($otras_ofertas) > 0): ?>
         <div class="otras-ofertas">
             <h2>Otras ofertas de <?php echo htmlspecialchars($empresa); ?></h2>
             <?php foreach ($otras_ofertas as $otra_oferta): ?>
-                <div class="oferta" onclick="window.location.href='detalle_oferta.php?id=<?php echo $otra_oferta['id']; ?>'">
+                <div class="oferta animate__animated animate__shakeX" onclick="window.location.href='detalle_oferta.php?id=<?php echo $otra_oferta['id']; ?>'">
                     <img src="../imagenes/<?php echo htmlspecialchars($otra_oferta['imagen']); ?>" alt="Imagen de la Empresa">
                     <div>
                         <h2><?php echo htmlspecialchars($otra_oferta['titulo']); ?></h2>
@@ -104,6 +111,7 @@ $ya_postulado = $result_postulado->num_rows > 0;
             </div>
         </div>
     </main>
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
     
      <?php
         include("../footer.php")

@@ -9,6 +9,7 @@
   "author": "Jesus Zeballos, Daniela Fernandez, Emmanuel Andrade, Clareth Tejerina",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "node-modules": "^1.0.1"
   }
 }

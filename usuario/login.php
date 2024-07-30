@@ -5,6 +5,7 @@
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
     <script>
         function togglePasswordVisibility() {
             var passwordField = document.getElementById('password');
@@ -19,7 +20,7 @@
         }
     </script>
 </head>
-<body>
+<body class="animate__animated animate__fadeIn">
     <header>
         <nav>
             <div class="logo">Ingresa con tu cuenta</div>

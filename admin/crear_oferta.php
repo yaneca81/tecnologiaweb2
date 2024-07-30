@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="../css/crear_oferta.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/modal_crear_oferta.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
 <style>
     .error{
         color: red;
     }
 </style>
 </head>
-<body>
+<body class="animate__animated animate__fadeIn">
     <header>
         <nav>
             <div class="logo">Panel de Administrador</div>
