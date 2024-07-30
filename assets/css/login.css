@@ -1,65 +1,114 @@
+/* Estilos generales para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Josefin Sans", sans-serif;
+    background-image: url('../images/rfev.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
-h1 {
-    text-align: center;
-}
-
-form {
-    background-color: white;
+/* Estilos para el contenedor del formulario */
+.form-container {
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo del formulario transparente */
+    border: 2px solid rgb(111, 0, 246); /* Bordes oscuros */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el título del formulario */
+h1.centrar {
+    margin-bottom: 20px;
     text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+/* Estilos para el logo */
+img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las etiquetas y campos de entrada */
+.transparent-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none; /* Elimina el borde predeterminado */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo del campo transparente */
+    border-bottom: 2px solid #fff; /* Borde inferior blanco */
+    color: rgb(111, 0, 246); /* Color del texto */
+    outline: none; /* Elimina el contorno de enfoque */
+}
+
+.transparent-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 label {
-    display: block;
-    margin: 15px 0 5px;
     font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
 }
 
-input[type="text"], input[type="password"] {
+/* Estilos para el botón de envío */
+.buttons {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: rgb(182, 121, 255);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
+.buttons:hover {
+    background-color: rgb(111, 0, 246);
 }
 
+/* Estilos para los enlaces de registro */
 .register-link {
-    margin-top: 20px;
-    display: block;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .register-link a {
-    color: #007bff;
+    color: rgb(111, 0, 246);
     text-decoration: none;
 }
 
 .register-link a:hover {
     text-decoration: underline;
+}
+
+/* Estilos para el mensaje de error */
+.error {
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
 }

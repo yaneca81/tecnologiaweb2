@@ -23,7 +23,6 @@ $empleos = obtenerEmpleos();
                     <img src='<?php echo $empleo['foto']; ?>' alt='<?php echo $empleo['titulo']; ?>'>
                     <h3><?php echo $empleo['titulo']; ?></h3>
                     <p><?php echo $empleo['descripcion']; ?></p>
-                    <!--button onclick='postular(<?php// echo $empleo["id"]; ?>, "<?php// echo $empleo["titulo"]; ?>", "<?php// echo $empleo["foto"]; ?>")'>Postular</button-->
                     <button onclick='postular(<?php echo $empleo["id"]; ?>)'>Postular</button>
                 </div>
             <?php endforeach; ?>
