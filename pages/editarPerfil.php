@@ -1,6 +1,6 @@
 <?php
 include '../config/config.php';
-include '../includes/header.php';
+//include '../includes/header.php';
 include '../logic/auth.php';
 
 // Verificar si el usuario ha iniciado sesión
@@ -11,6 +11,7 @@ if (!isset($_COOKIE['user_id'])) {
 
 $id_usuario = $_COOKIE['user_id'];
 $usuario = obtenerUsuario($id_usuario);
+($usuario['rol'] == 'estudiante')? include '../includes/header.php' : include '../includes/header_admin.php';
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
