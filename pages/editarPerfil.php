@@ -61,6 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Si no hay errores, actualizar el usuario
     if (empty($errors)) {
         if (actualizarUsuario($id_usuario, $nombre, $apellido, $correo, $telefono, $direccion, $fotoPath)) {
+            //correccion error al actualizar foto
+            setcookie("user_photo", $fotoPath, time() + (86400 * 30), "/");
             header('Location: perfil.php');
             exit();
         } else {

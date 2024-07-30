@@ -43,4 +43,5 @@ function agregarEmpleo($titulo, $descripcion, $categoria, $fotoPath) {
     $stmt->bind_param("ssss", $titulo, $descripcion, $categoria, $fotoPath);
     return $stmt->execute();
 }
+
 ?>
