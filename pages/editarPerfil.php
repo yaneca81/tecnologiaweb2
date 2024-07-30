@@ -74,51 +74,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Editar Perfil</title>
-    <link rel="stylesheet" href="../assets/css/error.css">
     <link rel="stylesheet" href="../assets/css/editarPerfil.css">
 </head>
 <body>
-<main>
-    <h2>Editar Perfil</h2>
-    <form method="POST" action="" enctype="multipart/form-data">
-        <img src="<?php echo $usuario['foto']; ?>" alt="Foto de perfil" id="fotoPerfil">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($usuario['nombre']); ?>" required>
-        <?php if (isset($errors['nombre'])): ?><div class="error"><?php echo $errors['nombre']; ?></div><?php endif; ?>
+    <div class="form-container">
+        <form method="POST" action="" enctype="multipart/form-data" class="transparent-form">
+            <img src="<?php echo $usuario['foto']; ?>" alt="Foto de perfil" id="fotoPerfil">
+            
+            <h2>Editar Perfil</h2>
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" value="<?php echo htmlspecialchars($usuario['apellido']); ?>" required>
-        <?php if (isset($errors['apellido'])): ?><div class="error"><?php echo $errors['apellido']; ?></div><?php endif; ?>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($usuario['nombre']); ?>" required>
+            <?php if (isset($errors['nombre'])): ?><div class="error"><?php echo $errors['nombre']; ?></div><?php endif; ?>
 
-        <label for="correo">Correo:</label>
-        <input type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($usuario['correo']); ?>" required>
-        <?php if (isset($errors['correo'])): ?><div class="error"><?php echo $errors['correo']; ?></div><?php endif; ?>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" value="<?php echo htmlspecialchars($usuario['apellido']); ?>" required>
+            <?php if (isset($errors['apellido'])): ?><div class="error"><?php echo $errors['apellido']; ?></div><?php endif; ?>
 
-        <label for="telefono">Teléfono:</label>
-        <input type="text" id="telefono" name="telefono" value="<?php echo htmlspecialchars($usuario['telefono']); ?>" required>
-        <?php if (isset($errors['telefono'])): ?><div class="error"><?php echo $errors['telefono']; ?></div><?php endif; ?>
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($usuario['correo']); ?>" required>
+            <?php if (isset($errors['correo'])): ?><div class="error"><?php echo $errors['correo']; ?></div><?php endif; ?>
 
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" value="<?php echo htmlspecialchars($usuario['direccion']); ?>" required>
-        <?php if (isset($errors['direccion'])): ?><div class="error"><?php echo $errors['direccion']; ?></div><?php endif; ?>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" value="<?php echo htmlspecialchars($usuario['telefono']); ?>" required>
+            <?php if (isset($errors['telefono'])): ?><div class="error"><?php echo $errors['telefono']; ?></div><?php endif; ?>
 
-        <label for="foto">Foto:</label>
-        <input type="file" id="foto" name="foto">
-        <?php if (isset($errors['foto'])): ?><div class="error"><?php echo $errors['foto']; ?></div><?php endif; ?>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" value="<?php echo htmlspecialchars($usuario['direccion']); ?>" required>
+            <?php if (isset($errors['direccion'])): ?><div class="error"><?php echo $errors['direccion']; ?></div><?php endif; ?>
 
-        <button type="submit">Actualizar Perfil</button>
-        <?php if (isset($errors['general'])): ?><div class="error"><?php echo $errors['general']; ?></div><?php endif; ?>
-    </form>
-</main>
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto">
+            <?php if (isset($errors['foto'])): ?><div class="error"><?php echo $errors['foto']; ?></div><?php endif; ?>
 
-<script>
-document.getElementById('foto').onchange = function(event) {
-    const [file] = event.target.files;
-    if (file) {
-        document.getElementById('fotoPerfil').src = URL.createObjectURL(file);
-    }
-};
-</script>
+            <button class="buttons" type="submit">Actualizar Perfil</button>
+            <?php if (isset($errors['general'])): ?><div class="error"><?php echo $errors['general']; ?></div><?php endif; ?>
+        </form>
+    </div>
+
+    <script>
+    document.getElementById('foto').onchange = function(event) {
+        const [file] = event.target.files;
+        if (file) {
+            document.getElementById('fotoPerfil').src = URL.createObjectURL(file);
+        }
+    };
+    </script>
 </body>
 </html>
 

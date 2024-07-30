@@ -21,28 +21,28 @@ $postulaciones = obtenerMisPostulaciones($id_usuario);
     <link rel="stylesheet" href="../assets/css/misPostulaciones.css">
 </head>
 <body>
-<main>
-    <h2>Mis Postulaciones</h2>
-    <div class="postulaciones-container">
-        <?php if (count($postulaciones) > 0): ?>
-            <?php foreach ($postulaciones as $postulacion): ?>
-                <div class='postulacion'>
-                    <img src='<?php echo $postulacion['foto']; ?>' alt='<?php echo $postulacion['titulo']; ?>'>
-                    <div class='postulacion-info'>
-                        <h3><?php echo $postulacion['titulo']; ?></h3>
-                        <p>Categoría: <?php echo $postulacion['categoria']; ?></p>
-                        <p>Fecha de postulación: <?php echo $postulacion['fecha']; ?></p>
-                        <p class='estado <?php echo strtolower($postulacion['estado']); ?>'>Estado: <?php echo $postulacion['estado']; ?></p>
+<div class="content-wrapper">
+    <main>
+        <h2>Mis Postulaciones</h2>
+        <div class="postulaciones-container">
+            <?php if (count($postulaciones) > 0): ?>
+                <?php foreach ($postulaciones as $postulacion): ?>
+                    <div class='postulacion'>
+                        <img src='<?php echo $postulacion['foto']; ?>' alt='<?php echo $postulacion['titulo']; ?>'>
+                        <div class='postulacion-info'>
+                            <h3><?php echo $postulacion['titulo']; ?></h3>
+                            <p>Categoría: <?php echo $postulacion['categoria']; ?></p>
+                            <p>Fecha de postulación: <?php echo $postulacion['fecha']; ?></p>
+                            <p class='estado <?php echo strtolower($postulacion['estado']); ?>'>Estado: <?php echo $postulacion['estado']; ?></p>
+                        </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>No has realizado ninguna postulación.</p>
-        <?php endif; ?>
-    </div>
-</main>
-
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No has realizado ninguna postulación.</p>
+            <?php endif; ?>
+        </div>
+    </main>
+    <?php include '../includes/footer.php'; ?>
+</div>
 </body>
 </html>
-
-<?php include '../includes/footer.php'; ?>

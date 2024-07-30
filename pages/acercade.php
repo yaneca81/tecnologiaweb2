@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <title>Acerca de</title>
     <link rel="stylesheet" href="../assets/css/acercade.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Indie+Flower&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
@@ -26,10 +29,10 @@
             <h3>Integrantes del Grupo</h3>
             <ul>
                 <li>Daniel Mancilla Tejerina</li>
-                <li>Integrante 2</li>
-                <li>Integrante 3</li>
-                <li>Integrante 4</li>
-                <li>Integrante 5</li>
+                <li>Victor Taja Fernandez</li>
+                <li>Sebastian Zambrana Arevillca</li>
+                <li>Hugo Acosta Vilte</li>
+                <li>Santiago Tapia</li>
             </ul>
         </div>
     </section>
