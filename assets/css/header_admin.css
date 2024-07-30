@@ -1,18 +1,26 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Estilos para el header del admin */
 .admin-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #343a40;
+    background-color: rgb(47, 8, 94); /* Color de fondo del header */
     color: white;
     padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de la barra lateral */
 }
 
+/* Estilos para el botón del menú */
 .admin-header .menu-toggle {
     background: none;
     border: none;
@@ -21,76 +29,150 @@ body {
     cursor: pointer;
 }
 
+/* Estilos para la sección central del header */
 .admin-header .header-center {
     display: flex;
     align-items: center;
+    gap: 20px; /* Espaciado entre el logo y el título */
 }
 
 .admin-header .header-center .logo {
+    height: 60px; /* Tamaño del logo */
+    margin-right: 50px;
     width: 40px;
-    height: 40px;
-    margin-right: 10px;
 }
 
 .admin-header h1 {
     margin: 0;
     font-size: 24px;
+    font-weight: 500; /* Peso de la fuente del título */
 }
 
+/* Estilos para la sección de usuario del header */
 .admin-header .user-info {
     display: flex;
     align-items: center;
+    gap: 10px; /* Espaciado entre los elementos de usuario */
 }
 
 .admin-header .user-info a {
     color: white;
     text-decoration: none;
-    margin-right: 10px;
+    font-weight: 500; /* Peso de la fuente de los enlaces de usuario */
+    font-family: "Josefin Sans", sans-serif;
+    padding-right: 60px;
 }
 
 .admin-header .user-info img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 10px;
+    object-fit: cover;
 }
 
 .admin-header .user-info a:hover {
-    text-decoration: underline;
+    color: #007bff; /* Color al pasar el ratón sobre el enlace */
 }
 
+/* Estilos para la barra lateral */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Inicialmente fuera de la vista */
     width: 250px;
     height: 100%;
-    background-color: #343a40;
+    background-color: rgb(47, 8, 94); /* Color de fondo de la barra lateral */
     color: white;
     overflow-y: auto;
     transition: left 0.3s;
     padding-top: 60px;
+    z-index: 999; /* Asegura que la barra lateral esté debajo del header */
 }
 
+/* Estilos para los enlaces dentro de la barra lateral */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
 .sidebar ul li {
-    padding: 10px 20px;
+    margin: 10px 0;
 }
 
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-    display: block;
+    font-weight: 500; /* Peso de la fuente de los enlaces de la barra lateral */
+    font-size: 16px; /* Tamaño de la fuente de los enlaces de la barra lateral */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    display: block; /* Hace que el enlace ocupe todo el espacio del elemento de lista */
+    padding: 10px 20px; /* Añade espacio alrededor del texto */
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .sidebar ul li a:hover {
-    background-color: #495057;
+    color: rgb(111, 0, 246); /* Color al pasar el ratón sobre el enlace */
+    border-bottom: 2px solid rgb(111, 0, 246); /* Subrayado en el enlace al pasar el ratón */
 }
 
+/* Estilos para mostrar la barra lateral */
 .sidebar.show {
     left: 0;
+}
+
+/* Estilos para el contenido principal cuando la barra lateral está visible */
+main.with-sidebar {
+    margin-left: 250px; /* Ajusta el margen para evitar que quede oculto detrás de la barra lateral */
+}
+
+/* Adaptaciones para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajusta el header para dispositivos móviles */
+    .admin-header {
+        padding: 10px;
+    }
+
+    .admin-header .header-center {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-header .header-center .logo {
+        height: 30px;
+        margin-right: 0;
+    }
+
+    .admin-header h1 {
+        font-size: 20px;
+    }
+
+    .admin-header .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-header .user-info a {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        left: 0;
+        top: auto;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .sidebar ul {
+        display: flex;
+        gap: 10px;
+    }
+}
+.tituloEmpresa{
+    font-family: "Josefin Sans", sans-serif;
+    color: white;
 }
