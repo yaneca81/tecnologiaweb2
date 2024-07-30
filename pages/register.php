@@ -98,48 +98,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Registro de Usuario</title>
-    <link rel="stylesheet" href="../assets/css/error.css">
     <link rel="stylesheet" href="../assets/css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Indie+Flower&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form method="POST" action="" enctype="multipart/form-data">
-        <h1>Registro de Usuario</h1>
-        <label for="user">Usuario:</label>
-        <input type="text" id="user" name="user" value="<?php echo htmlspecialchars($userData['user']); ?>" required>
-        <?php if (isset($errors['user'])): ?><div class="error"><?php echo $errors['user']; ?></div><?php endif; ?>
-
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($userData['password']); ?>" required>
-        <?php if (isset($errors['password'])): ?><div class="error"><?php echo $errors['password']; ?></div><?php endif; ?>
-
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($userData['nombre']); ?>" required>
-        <?php if (isset($errors['nombre'])): ?><div class="error"><?php echo $errors['nombre']; ?></div><?php endif; ?>
-
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" value="<?php echo htmlspecialchars($userData['apellido']); ?>" required>
-        <?php if (isset($errors['apellido'])): ?><div class="error"><?php echo $errors['apellido']; ?></div><?php endif; ?>
-
-        <label for="correo">Correo:</label>
-        <input type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($userData['correo']); ?>" required>
-        <?php if (isset($errors['correo'])): ?><div class="error"><?php echo $errors['correo']; ?></div><?php endif; ?>
-
-        <label for="telefono">Teléfono:</label>
-        <input type="text" id="telefono" name="telefono" value="<?php echo htmlspecialchars($userData['telefono']); ?>" required>
-        <?php if (isset($errors['telefono'])): ?><div class="error"><?php echo $errors['telefono']; ?></div><?php endif; ?>
-
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" value="<?php echo htmlspecialchars($userData['direccion']); ?>" required>
-        <?php if (isset($errors['direccion'])): ?><div class="error"><?php echo $errors['direccion']; ?></div><?php endif; ?>
-
-        <label for="foto">Foto:</label>
-        <input type="file" id="foto" name="foto">
-        <?php if (isset($errors['foto'])): ?><div class="error"><?php echo $errors['foto']; ?></div><?php endif; ?>
-
-        <button type="submit">Registrar</button>
-        <div class="login-link">
-            <span>¿Ya tienes cuenta? </span><a href="login.php">Iniciar sesión</a>
-        </div>
-    </form>
+    <div class="form-container">
+        <form method="POST" action="" enctype="multipart/form-data" class="transparent-form">
+            <div class="centrar">
+                <h1 class="titulo">Registro de Usuario</h1>
+            </div>
+            <div class="fila">
+                <input class="transparent-input input custom-input" placeholder="Usuario:" type="text" id="user" name="user" value="<?php echo htmlspecialchars($userData['user']); ?>" required>
+                <?php if (isset($errors['user'])): ?><div class="error"><?php echo $errors['user']; ?></div><?php endif; ?>
+            </div>
+            <div class="fila">
+                <input class="transparent-input input custom-input" placeholder="Contraseña:" type="password" id="password" name="password" value="<?php echo htmlspecialchars($userData['password']); ?>" required>
+                <?php if (isset($errors['password'])): ?><div class="error"><?php echo $errors['password']; ?></div><?php endif; ?>
+            </div>
+            <div class="fila">
+                <input class="transparent-input input custom-input" placeholder="Nombre:" type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($userData['nombre']); ?>" required>
+                <?php if (isset($errors['nombre'])): ?><div class="error"><?php echo $errors['nombre']; ?></div><?php endif; ?>
+            </div>
+            <div class="fila">
+                <input class="transparent-input input custom-input" placeholder="Apellido:" type="text" id="apellido" name="apellido" value="<?php echo htmlspecialchars($userData['apellido']); ?>" required>
+                <?php if (isset($errors['apellido'])): ?><div class="error"><?php echo $errors['apellido']; ?></div><?php endif; ?>
+            </div>
+            <div class="fila">
+                <input class="transparent-input input custom-input" placeholder="Correo:" type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($userData['correo']); ?>" required>
+                <?php if (isset($errors['correo'])): ?><div class="error"><?php echo $errors['correo']; ?></div><?php endif; ?>
+            </div>
+            <div class="fila">
+                <input class="transparent-input input custom-input" placeholder="Teléfono:" type="text" id="telefono" name="telefono" value="<?php echo htmlspecialchars($userData['telefono']); ?>" required>
+                <?php if (isset($errors['telefono'])): ?><div class="error"><?php echo $errors['telefono']; ?></div><?php endif; ?>
+            </div>
+            <div class="fila">
+                <input class="transparent-input input custom-input" placeholder="Dirección:" type="text" id="direccion" name="direccion" value="<?php echo htmlspecialchars($userData['direccion']); ?>" required>
+                <?php if (isset($errors['direccion'])): ?><div class="error"><?php echo $errors['direccion']; ?></div><?php endif; ?>
+            </div>
+            <div class="fila">
+                <label for="foto" class="foto-label">Foto:</label>
+                <input class="transparent-input input custom-input" type="file" id="foto" name="foto">
+                <?php if (isset($errors['foto'])): ?><div class="error"><?php echo $errors['foto']; ?></div><?php endif; ?>
+            </div>
+            <div class="fila">
+                <button class="buttons" type="submit">Registrar</button>
+            </div>
+            <div class="login-link centrar">
+                <span>¿Ya tienes cuenta? </span><a href="login.php">Iniciar sesión</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
