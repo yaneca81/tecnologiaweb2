@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    margin-left: 250px; /* To make space for the sidebar */
+    transition: margin-left 0.3s;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.chart-wrapper {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.chart-wrapper canvas {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.chart-wrapper h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}

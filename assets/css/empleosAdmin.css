@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    margin-left: 250px; /* To make space for the sidebar */
+    transition: margin-left 0.3s;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.empleos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.empleo {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.empleo.activo {
+    border-left: 5px solid green;
+}
+
+.empleo.desactivado {
+    border-left: 5px solid red;
+}
+
+.empleo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.empleo-info h3 {
+    margin: 10px 0;
+}
+
+.empleo-info p {
+    color: #555;
+}
+
+.empleo-acciones {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.editar {
+    background-color: #007bff;
+}
+
+.editar:hover {
+    background-color: #0056b3;
+}
+
+.desactivar {
+    background-color: #dc3545;
+}
+
+.desactivar:hover {
+    background-color: #c82333;
+}
+
+.activar {
+    background-color: #28a745;
+}
+
+.activar:hover {
+    background-color: #218838;
+}
+
+.eliminar {
+    background-color: #343a40;
+}
+
+.eliminar:hover {
+    background-color: #23272b;
+}
