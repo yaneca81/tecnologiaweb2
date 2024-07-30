@@ -18,8 +18,8 @@
             <li><a href="../pages/acercade.php">Acerca de</a></li>
             <?php if (isset($_COOKIE['user_id'])): ?>
                 <li class="user-info">
-                    <img src="<?php echo htmlspecialchars($_COOKIE['user_photo']); ?>" alt="User Photo">
                     <a href="perfil.php"><span><?php echo htmlspecialchars($_COOKIE['user_name']); ?></span></a>
+                    <img src="<?php echo htmlspecialchars($_COOKIE['user_photo']); ?>" alt="User Photo">
                     <a href="../logic/logout.php">Cerrar Sesión</a>
                 </li>
             <?php else: ?>
