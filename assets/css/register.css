@@ -1,65 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Josefin Sans", sans-serif;
+    background-image: url('../images/rfev.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
-
-h1 {
-    text-align: center;
-}
-
-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-
-label {
-    display: block;
-    margin: 15px 0 5px;
+.foto-label{
     font-weight: bold;
 }
-
-input[type="text"], input[type="password"], input[type="email"], input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.form-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo del formulario transparente */
+    border: 2px solid rgb(111, 0, 246); /* Bordes */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
 }
 
-button[type="submit"] {
-    width: 100%;
+.transparent-form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px; /* Espacio entre filas */
+}
+
+.input {
+    flex: 1;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    margin-right: 10px; /* Espacio entre inputs */
+    border: none;
+    border-bottom: 2px solid #fff; /* Borde inferior */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    color: rgb(111, 0, 246); /* Color del texto */
+    outline: none;
+}
+
+.input:last-child {
+    margin-right: 0; /* Quita el margen derecho del último input */
+}
+
+.custom-input::placeholder {
+    color: rgb(0, 0, 0); /* Color del placeholder */
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(110, 0, 244);
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    width: 100%;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: rgb(111, 0, 246);
 }
 
 .login-link {
-    margin-top: 20px;
-    display: block;
+    margin-top: 10px;
 }
 
 .login-link a {
-    color: #007bff;
+    color: rgb(111, 0, 246);
     text-decoration: none;
 }
 
 .login-link a:hover {
     text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 10px;
 }
