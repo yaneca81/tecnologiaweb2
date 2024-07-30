@@ -117,3 +117,10 @@ h2 {
 .eliminar:hover {
     background-color: #23272b;
 }
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

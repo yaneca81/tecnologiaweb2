@@ -1,57 +1,98 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Josefin Sans", sans-serif;
+    background-image: url('../assets/images/rfev.jpg');
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
+    color: white; /* Color de texto general */
 }
 
+/* Estilos para el contenido principal */
 main {
+    margin-top: 80px; /* Ajusta el margen superior para evitar que el contenido quede oculto detrás del header */
     padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.perfil-container {
-    background-color: white;
-    padding: 20px;
+    background-color: rgba(47, 8, 94, 0.8); /* Fondo con color semi-transparente */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 20px auto; /* Centra el contenedor en la página */
 }
 
-.foto-perfil {
+/* Estilos para el encabezado principal */
+main h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white; /* Color del título */
+}
+
+/* Estilos para el contenedor del perfil */
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil-container .foto-perfil {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    border: 3px solid rgb(111, 0, 246); /* Borde alrededor de la foto de perfil */
 }
 
-.perfil-info {
-    text-align: left;
-    margin-bottom: 20px;
+.perfil-container .perfil-info {
+    text-align: center;
+    font-size: 1.2em;
 }
 
-.perfil-info p {
-    margin: 10px 0;
-    font-size: 16px;
+.perfil-container .perfil-info p {
+    margin: 5px 0;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
+.perfil-container .perfil-info strong {
+    color: rgb(111, 0, 246); /* Color del texto de etiquetas */
+}
+
+.perfil-container .button {
+    background-color: rgb(111, 0, 246); /* Fondo del botón */
     color: white;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block; /* Asegura que el botón se ajuste a su contenido */
 }
 
-.button:hover {
-    background-color: #0056b3;
+.perfil-container .button:hover {
+    background-color: rgb(47, 8, 94); /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Adaptaciones para dispositivos móviles */
+@media (max-width: 768px) {
+    .perfil-container {
+        padding: 10px;
+    }
+
+    .perfil-container .foto-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .perfil-container .perfil-info {
+        font-size: 1em;
+    }
+}
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }

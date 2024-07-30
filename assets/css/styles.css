@@ -9,8 +9,9 @@
 }
 
 .navbar img {
-    height: 100px;
+    height: 60px;
     margin-right: 50px;
+    width: 40px;
 }
 
 .navbar ul {
