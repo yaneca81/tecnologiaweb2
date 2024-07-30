@@ -34,7 +34,7 @@ if (!isset($_COOKIE['user_id']) || $_COOKIE['user_role'] !== 'admin') {
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="../pages/empleosAdmin.php">Empleos</a></li>
             <li><a href="../pages/usuarioAdmin.php">Usuarios</a></li>
-            <li><a href="postulaciones.php">Postulaciones</a></li>
+            <li><a href="../pages/postulacionAdmin.php">Postulaciones</a></li>
         </ul>
     </nav>
 </body>
