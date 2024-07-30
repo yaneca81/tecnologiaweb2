@@ -1,71 +1,103 @@
+/* Estilos generales para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Josefin Sans", sans-serif;
+    background-image: url('../images/rfev.jpg'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
 }
 
-main {
+/* Estilos para el contenedor del formulario */
+.form-container {
     padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-form {
-    background-color: white;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo del formulario menos transparente */
+    border: 2px solid rgb(111, 0, 246); /* Bordes oscuros */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto; /* Centra el formulario en la página */
 }
 
-form img {
-    display: block;
-    max-width: 150px;
-    max-height: 150px;
-    margin: 0 auto 20px;
+/* Estilos para el título del formulario */
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+/* Estilos para la imagen de perfil */
+#fotoPerfil {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    margin-bottom: 20px;
     object-fit: cover;
 }
 
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="file"] {
+/* Estilos para las etiquetas y campos de entrada */
+.transparent-input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    border: none; /* Elimina el borde predeterminado */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo del campo transparente */
+    border-bottom: 2px solid rgb(111, 0, 246); /* Borde inferior de color */
+    color: rgb(111, 0, 246); /* Color del texto */
+    outline: none; /* Elimina el contorno de enfoque */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-form button {
+/* Estilos para las etiquetas */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+/* Estilos para el botón de envío */
+.buttons {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: rgb(182, 121, 255);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
 }
 
-form button:hover {
-    background-color: #0056b3;
+.buttons:hover {
+    background-color: rgb(111, 0, 246);
 }
 
+/* Estilos para los mensajes de error */
 .error {
     color: red;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }

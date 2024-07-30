@@ -1,18 +1,40 @@
+/* Estilos generales para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #f0f0f0;
+    background-image: url('../images/tgh.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana del navegador */
 }
 
+/* Contenedor principal que envuelve el contenido y el footer */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para el contenedor principal */
 main {
     padding: 20px;
-}
-
-h2 {
     text-align: center;
+    flex: 1; /* Permite que main ocupe el espacio disponible */
 }
 
+/* Estilos para el título principal */
+main h2 {
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de empleos */
 .empleos-container {
     display: flex;
     flex-wrap: wrap;
@@ -20,94 +42,67 @@ h2 {
     gap: 20px;
 }
 
+/* Estilos para cada empleo */
 .empleo {
-    background-color: white;
-    border-radius: 10px;
+    background: #fff;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    padding: 15px;
     text-align: center;
-    padding: 20px;
-    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empleo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .empleo img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .empleo h3 {
+    font-size: 1.5em;
+    color: rgb(198, 144, 238);
     margin: 10px 0;
 }
 
 .empleo p {
-    color: #555;
+    font-size: 14px;
+    color: rgb(198, 144, 238);
 }
 
 .empleo button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    background-color: rgb(182, 121, 255);
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .empleo button:hover {
-    background-color: #0056b3;
+    background-color: rgba(135, 49, 240, 0.8);
 }
 
-/* Estilos para el modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.modal .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+/* Estilos para el mensaje cuando no hay empleos */
+main p {
+    font-size: 1.2em;
+    color: black;
     font-weight: bold;
 }
 
-.modal .close:hover,
-.modal .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 20px;
-}
-
-.modal .button:hover {
-    background-color: #0056b3;
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }

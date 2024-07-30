@@ -1,12 +1,12 @@
 <?php
-$host = 'localhost';
-$db = 'EmpleosBD';
-$user = 'root';
-$pass = '0000';
 // $host = 'localhost';
 // $db = 'EmpleosBD';
 // $user = 'root';
-// $pass = '';
+// $pass = '0000';
+$host = 'localhost';
+$db = 'EmpleosBD';
+$user = 'root';
+$pass = '';
 // Crear conexión
 $conn = new mysqli($host, $user, $pass, $db);
 // Verificar conexión
