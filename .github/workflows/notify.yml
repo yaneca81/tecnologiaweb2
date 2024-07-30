@@ -1,0 +1,35 @@
+name: Notify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get commit info
+        id: commit
+        run: |
+          echo "Author: ${{ github.event.head_commit.author.name }}"
+          echo "Message: ${{ github.event.head_commit.message}}"
+          echo "Hash: ${{ github.event.head_commit.id }}"
+
+      - name: Send Message
+        env:
+          SERVER_URL: ${{ secrets.WHATSAPP_SERVER_URL }}
+          API_KEY: ${{ secrets.WHATSAPP_API_KEY }}
+          GROUP_ID: ${{ secrets.WHATSAPP_GROUP_ID }}
+        run: |
+          MESSAGE="Nuevos cambios en el repo no olviden hacerse un pull :D\n\nBy *${{ github.event.head_commit.author.name }}*\n\n\`${{ github.event.head_commit.message }}\`\n\n*${{ github.event.head_commit.id }}*"
+
+          JSON_PAYLOAD="{\"group\":\"$GROUP_ID\",\"message\":\"$MESSAGE\"}"
+          echo "JSON Payload:"
+          echo "$JSON_PAYLOAD"
+
+          curl --request POST \
+            --url $SERVER_URL \
+            --header 'Content-Type: application/json' \
+             -H "Authorization: Bearer $API_KEY" \
+            --data "$JSON_PAYLOAD"
