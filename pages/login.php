@@ -52,9 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="form-container">
+        <h1 class="centrar">INICIAR SESIÓN</h1>
+        <img src="../assets/images/randall job negro.png" class="logoRandall" alt="">
         <form method="POST" action="" class="transparent-form">
-            <!-- <img src="../assets/images/RANDALL JOB LUPA.jpg" alt=""> -->
-            <h1 class="centrar">INICIAR SESIÓN</h1>
 
             <label for="usernameOrEmail">Usuario o Correo:</label>
             <input class="transparent-input input custom-input" type="text" id="usernameOrEmail" name="usernameOrEmail" value="<?php echo htmlspecialchars($usernameOrEmail); ?>" required>
