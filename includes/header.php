@@ -16,7 +16,7 @@
             <?php if (isset($_COOKIE['user_id'])): ?>
                 <li class="user-info">
                     <img src="<?php echo htmlspecialchars($_COOKIE['user_photo']); ?>" alt="User Photo">
-                    <a href="editarPerfil.php"><span><?php echo htmlspecialchars($_COOKIE['user_name']); ?></span></a>
+                    <a href="perfil.php"><span><?php echo htmlspecialchars($_COOKIE['user_name']); ?></span></a>
                     <a href="../logic/logout.php">Cerrar Sesión</a>
                 </li>
             <?php else: ?>
