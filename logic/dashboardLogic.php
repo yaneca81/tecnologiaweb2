@@ -42,14 +42,14 @@ function obtenerEstadisticasCategorias() {
 
 function obtenerEstadisticasTipos() {
     global $conn;
-    $tipos = ['medio tiempo', 'tiempo completo', 'medio tiempo|tiempo completo'];
+    $tipos = ['medio tiempo', 'tiempo completo', 'medio tiempo|tiempo completo', 'Otras'];
     $estadisticas = array_fill_keys($tipos, 0);
 
     $sql = "SELECT horario, COUNT(*) as cantidad FROM empleo JOIN postulacion ON empleo.id = postulacion.id_empleo GROUP BY horario";
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()) {
-        if (array_key_exists($row['tipo'], $estadisticas)) {
-            $estadisticas[$row['tipo']] = $row['cantidad'];
+        if (array_key_exists($row['horario'], $estadisticas)) {
+            $estadisticas[$row['horario']] = $row['cantidad'];
         } else {
             $estadisticas['Otras'] += $row['cantidad'];
         }

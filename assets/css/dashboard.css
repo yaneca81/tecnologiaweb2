@@ -13,6 +13,7 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
+    color: white; /* Color de texto blanco por defecto */
 }
 
 /* Estilo del contenedor principal */
@@ -20,7 +21,6 @@ main {
     padding: 20px;
     margin-left: 250px; /* Espacio para la barra lateral */
     transition: margin-left 0.3s;
-    color: white;
     flex: 1; /* Hace que main ocupe el espacio restante */
 }
 
@@ -31,121 +31,43 @@ h2 {
     color: black;
 }
 
-/* Estilo del botón 'Añadir Empleo' */
-.button.agregar {
-    display: block;
-    width: fit-content;
-    padding: 10px 20px;
-    margin: 0 auto 20px;
-    background-color: rgb(110, 0, 244);
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
+/* Estilo del párrafo de bienvenida */
+p {
     text-align: center;
-    border: 2px solid #6f00f6; /* Bordes en color morado */
+    margin-bottom: 20px;
+    color: black;
 }
 
-.button.agregar:hover {
-    background-color: rgb(111, 0, 246);
-}
-
-/* Estilo del contenedor de empleos */
-.empleos-container {
+/* Estilo del contenedor de gráficos */
+.charts-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-/* Estilo de cada empleo */
-.empleo {
+/* Estilo del contenedor de cada gráfico */
+.chart-wrapper {
     background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
     border: 2px solid #6f00f6; /* Bordes en color morado */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
     padding: 20px;
+    width: 300px;
     text-align: center;
-    position: relative;
-    color: white;
-}
-
-/* Estilos según el estado del empleo */
-.empleo.activo {
-    border-left: 5px solid rgb(0, 255, 0); /* Verde */
-}
-
-.empleo.desactivado {
-    border-left: 5px solid rgb(255, 0, 0); /* Rojo */
-}
-
-/* Estilo de la imagen del empleo */
-.empleo img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* Estilo de la información del empleo */
-.empleo-info h3 {
-    margin: 10px 0;
     color: black;
 }
 
-.empleo-info p {
+.chart-wrapper h3 {
+    margin: 0 0 10px;
     color: black;
 }
 
-/* Estilo de las acciones del empleo */
-.empleo-acciones {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-}
-
-/* Estilos de los botones */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    border: 2px solid #6f00f6; /* Bordes en color morado */
-    font-family: "Josefin Sans", sans-serif;
-}
-
-.editar {
-    background-color: rgb(110, 0, 244);
-}
-
-.editar:hover {
-    background-color: rgb(111, 0, 246);
-}
-
-.desactivar {
-    background-color: rgb(255, 0, 0);
-}
-
-.desactivar:hover {
-    background-color: rgb(220, 53, 69);
-}
-
-.activar {
-    background-color: rgb(0, 255, 0);
-}
-
-.activar:hover {
-    background-color: rgb(40, 167, 69);
-}
-
-.eliminar {
-    background-color: rgb(52, 58, 64);
-}
-
-.eliminar:hover {
-    background-color: rgb(33, 37, 43);
+/* Estilo del canvas de los gráficos */
+canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* Estilo del footer */
