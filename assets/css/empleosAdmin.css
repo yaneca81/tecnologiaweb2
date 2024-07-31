@@ -1,36 +1,48 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('../images/rfev.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
+/* Estilo del contenedor principal */
 main {
     padding: 20px;
-    margin-left: 250px; /* To make space for the sidebar */
+    margin-left: 250px; /* Espacio para la barra lateral */
     transition: margin-left 0.3s;
+    color: white;
 }
 
+/* Estilo del título */
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: black;
 }
 
+/* Estilo del botón 'Añadir Empleo' */
 .button.agregar {
     display: block;
     width: fit-content;
     padding: 10px 20px;
     margin: 0 auto 20px;
-    background-color: #28a745;
+    background-color: rgb(110, 0, 244);
     color: white;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
+    border: 2px solid #6f00f6; /* Bordes en color morado */
 }
 
 .button.agregar:hover {
-    background-color: #218838;
+    background-color: rgb(111, 0, 246);
 }
 
+/* Estilo del contenedor de empleos */
 .empleos-container {
     display: flex;
     flex-wrap: wrap;
@@ -38,24 +50,29 @@ h2 {
     justify-content: center;
 }
 
+/* Estilo de cada empleo */
 .empleo {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    border: 2px solid #6f00f6; /* Bordes en color morado */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 300px;
     padding: 20px;
     text-align: center;
     position: relative;
+    color: white;
 }
 
+/* Estilos según el estado del empleo */
 .empleo.activo {
-    border-left: 5px solid green;
+    border-left: 5px solid rgb(0, 255, 0); /* Verde */
 }
 
 .empleo.desactivado {
-    border-left: 5px solid red;
+    border-left: 5px solid rgb(255, 0, 0); /* Rojo */
 }
 
+/* Estilo de la imagen del empleo */
 .empleo img {
     width: 100px;
     height: 100px;
@@ -64,60 +81,67 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Estilo de la información del empleo */
 .empleo-info h3 {
     margin: 10px 0;
+    color: black;
 }
 
 .empleo-info p {
-    color: #555;
+    color: black;
 }
 
+/* Estilo de las acciones del empleo */
 .empleo-acciones {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
 }
 
+/* Estilos de los botones */
 .button {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     color: white;
+    border: 2px solid #6f00f6; /* Bordes en color morado */
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .editar {
-    background-color: #007bff;
+    background-color: rgb(110, 0, 244);
 }
 
 .editar:hover {
-    background-color: #0056b3;
+    background-color: rgb(111, 0, 246);
 }
 
 .desactivar {
-    background-color: #dc3545;
+    background-color: rgb(255, 0, 0);
 }
 
 .desactivar:hover {
-    background-color: #c82333;
+    background-color: rgb(220, 53, 69);
 }
 
 .activar {
-    background-color: #28a745;
+    background-color: rgb(0, 255, 0);
 }
 
 .activar:hover {
-    background-color: #218838;
+    background-color: rgb(40, 167, 69);
 }
 
 .eliminar {
-    background-color: #343a40;
+    background-color: rgb(52, 58, 64);
 }
 
 .eliminar:hover {
-    background-color: #23272b;
+    background-color: rgb(33, 37, 43);
 }
-/* Estilos para el footer */
+
+/* Estilo del footer */
 footer {
     background-color: #333;
     color: #fff;
