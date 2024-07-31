@@ -6,4 +6,3 @@ Tecnologias a aplicar
 * php
 * javaScript
 * base de datos mysql
-## 70% de avance
