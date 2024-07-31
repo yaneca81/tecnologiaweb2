@@ -9,7 +9,7 @@ if (!isset($_GET['id'])) {
 
 $id = $_GET['id'];
 $empleo = obtenerEmpleoPorId($id);
-$categorias = ['Tecnología', 'Salud', 'Educación', 'Administración', 'Comercio'];
+$categorias = ['Tecnología', 'Salud', 'Educación', 'Administración', 'Comercio', 'Otras'];
 $tipos = ['medio tiempo', 'tiempo completo', 'mediotiempo y timepo completo'];
 
 $horario = explode('|', $empleo['tipo']);

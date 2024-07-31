@@ -2,7 +2,7 @@
 include '../includes/header_admin.php';
 include '../logic/empleosAdminLogic.php';
 
-$categorias = ['Tecnología', 'Salud', 'Educación', 'Administración', 'Comercio'];
+$categorias = ['Tecnología', 'Salud', 'Educación', 'Administración', 'Comercio', 'Otras'];
 $tipos = ['medio tiempo', 'tiempo completo', 'mediotiempo y timepo completo'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
