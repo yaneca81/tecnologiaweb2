@@ -1,23 +1,27 @@
 /* Estilos generales */
 body {
     font-family: "Josefin Sans", sans-serif;
-    background-image: url('../assets/images/rfev.jpg');
+    background-image: url('../images/rfev.jpg');
     background-size: cover;
     background-position: center;
     margin: 0;
     padding: 0;
     color: white; /* Color de texto general */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Estilos para el contenido principal */
 main {
-    margin-top: 80px; /* Ajusta el margen superior para evitar que el contenido quede oculto detrás del header */
+    margin-top: 150px; /* Ajusta el margen superior para evitar que el contenido quede oculto detrás del header */
     padding: 20px;
-    background-color: rgba(47, 8, 94, 0.8); /* Fondo con color semi-transparente */
+    background-color: rgba(65, 40, 96, 0.8); /* Fondo con color semi-transparente */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     margin: 20px auto; /* Centra el contenedor en la página */
+    flex-grow: 1;
 }
 
 /* Estilos para el encabezado principal */
@@ -54,7 +58,7 @@ main h2 {
 }
 
 .perfil-container .perfil-info strong {
-    color: rgb(111, 0, 246); /* Color del texto de etiquetas */
+    color: white; /* Color del texto de etiquetas */
 }
 
 .perfil-container .button {
@@ -74,6 +78,18 @@ main h2 {
     background-color: rgb(47, 8, 94); /* Color de fondo del botón al pasar el ratón */
 }
 
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: white; /* Color de texto del footer */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
 /* Adaptaciones para dispositivos móviles */
 @media (max-width: 768px) {
     .perfil-container {
@@ -88,11 +104,4 @@ main h2 {
     .perfil-container .perfil-info {
         font-size: 1em;
     }
-}
-/* Estilos para el footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
 }

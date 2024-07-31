@@ -1,131 +1,124 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    background-image: url('../images/rfev.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+    background-attachment: fixed;
+    background-position: center;
     margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 main {
-    padding: 20px;
-    margin-left: 250px; /* To make space for the sidebar */
-    transition: margin-left 0.3s;
+    padding-top: 100px; /* Espacio superior para evitar que el contenido quede oculto detrás del header */
+    padding-bottom: 50px; /* Espacio inferior para evitar que el contenido quede oculto detrás del footer */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 50px; /* Para ajustar más el espacio del contenedor principal */
 }
 
 h2 {
-    text-align: center;
     margin-bottom: 20px;
-}
-
-.button.agregar {
-    display: block;
-    width: fit-content;
-    padding: 10px 20px;
-    margin: 0 auto 20px;
-    background-color: #28a745;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-}
-
-.button.agregar:hover {
-    background-color: #218838;
+    color: black;
+    margin-right: 960px;
 }
 
 .usuarios-container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .usuarios-admin, .usuarios-estudiantes {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
     padding: 20px;
+    border: 2px solid #6f00f6; /* Bordes en color morado */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
 }
 
 .usuarios-admin h3, .usuarios-estudiantes h3 {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-top: 0;
+    color: black;
 }
 
 .usuario {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
 }
 
 .usuario img {
     width: 50px;
     height: 50px;
-    object-fit: cover;
     border-radius: 50%;
+    margin-right: 15px;
+}
+
+.usuario-info {
+    flex: 1;
 }
 
 .usuario-info h4 {
     margin: 0;
-    font-size: 18px;
+    color: #6f00f6;
 }
 
 .usuario-info p {
-    margin: 5px 0;
-    color: #555;
+    margin: 0;
+    color: #fff;
 }
 
 .usuario-acciones {
-    margin-left: auto;
     display: flex;
     gap: 10px;
 }
 
 .button {
-    display: inline-block;
-    padding: 5px 10px;
+    padding: 10px;
+    background-color: rgb(110, 0, 244);
+    color: rgb(255, 255, 255);
+    border: none;
     border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none; /* Asegurar que los enlaces no tengan subrayado */
+    text-align: center; /* Centrar el texto dentro del botón */
+    /* margin-right: 990px; */
 }
 
-.editar {
-    background-color: #007bff;
-}
-
-.editar:hover {
-    background-color: #0056b3;
-}
-
-.eliminar {
-    background-color: #dc3545;
-}
-
-.eliminar:hover {
-    background-color: #c82333;
+.button:hover {
+    background-color: rgb(111, 0, 246);
 }
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none; /* Ocultar modal por defecto */
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Color de fondo */
+    background-color: rgba(0,0,0,0.4); /* Color de fondo con opacidad */
 }
 
 .modal-content {
-    background-color: white;
-    margin: 15% auto; 
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior y centrado */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
-    max-width: 300px;
-    text-align: center;
+    width: 80%; /* Podría ser más o menos según necesites */
+    max-width: 500px;
     border-radius: 10px;
 }
 
@@ -143,18 +136,20 @@ h2 {
     cursor: pointer;
 }
 
-.button.confirmar {
-    background-color: #28a745;
+.confirmar {
+    background-color: #4CAF50;
 }
 
-.button.confirmar:hover {
-    background-color: #218838;
+.cancelar {
+    background-color: #f44336;
 }
 
-.button.cancelar {
-    background-color: #6c757d;
-}
-
-.button.cancelar:hover {
-    background-color: #5a6268;
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: white; /* Color de texto del footer */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

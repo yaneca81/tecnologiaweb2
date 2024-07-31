@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Postulación</title>
     <link rel="stylesheet" href="../assets/css/error.css">
     <link rel="stylesheet" href="../assets/css/modal.css">
+    <link rel="stylesheet" href="../assets/css/postulacion.css">
 </head>
 <body>
 <main>

@@ -56,34 +56,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 <main>
-    <h2>Agregar Empleo</h2>
-    <form method="POST" action="" enctype="multipart/form-data">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" value="<?php echo isset($_POST['titulo']) ? htmlspecialchars($_POST['titulo']) : ''; ?>" required>
-        <?php if (isset($errors['titulo'])): ?><div class="error"><?php echo $errors['titulo']; ?></div><?php endif; ?>
+    <div class="form-container">
+        <h2 class="titulo">Agregar Empleo</h2>
+        <form method="POST" action="" enctype="multipart/form-data">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" value="<?php echo isset($_POST['titulo']) ? htmlspecialchars($_POST['titulo']) : ''; ?>" required>
+            <?php if (isset($errors['titulo'])): ?><div class="error"><?php echo $errors['titulo']; ?></div><?php endif; ?>
 
-        <label for="descripcion">Descripción:</label>
-        <input type="text" id="descripcion" name="descripcion" value="<?php echo isset($_POST['descripcion']) ? htmlspecialchars($_POST['descripcion']) : ''; ?>" required>
-        <?php if (isset($errors['descripcion'])): ?><div class="error"><?php echo $errors['descripcion']; ?></div><?php endif; ?>
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" value="<?php echo isset($_POST['descripcion']) ? htmlspecialchars($_POST['descripcion']) : ''; ?>" required>
+            <?php if (isset($errors['descripcion'])): ?><div class="error"><?php echo $errors['descripcion']; ?></div><?php endif; ?>
 
-        <label for="categoria">Categoría:</label>
-        <select id="categoria" name="categoria" required>
-            <option value="">Seleccione una categoría</option>
-            <?php foreach ($categorias as $cat): ?>
-                <option value="<?php echo $cat; ?>" <?php echo isset($_POST['categoria']) && $_POST['categoria'] == $cat ? 'selected' : ''; ?>><?php echo $cat; ?></option>
-            <?php endforeach; ?>
-        </select>
-        <?php if (isset($errors['categoria'])): ?><div class="error"><?php echo $errors['categoria']; ?></div><?php endif; ?>
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Seleccione una categoría</option>
+                <?php foreach ($categorias as $cat): ?>
+                    <option value="<?php echo $cat; ?>" <?php echo isset($_POST['categoria']) && $_POST['categoria'] == $cat ? 'selected' : ''; ?>><?php echo $cat; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <?php if (isset($errors['categoria'])): ?><div class="error"><?php echo $errors['categoria']; ?></div><?php endif; ?>
 
-        <label for="foto">Foto:</label>
-        <input type="file" id="foto" name="foto">
-        <?php if (isset($errors['foto'])): ?><div class="error"><?php echo $errors['foto']; ?></div><?php endif; ?>
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto">
+            <?php if (isset($errors['foto'])): ?><div class="error"><?php echo $errors['foto']; ?></div><?php endif; ?>
 
-        <button type="submit">Agregar Empleo</button>
-        <?php if (isset($errors['general'])): ?><div class="error"><?php echo $errors['general']; ?></div><?php endif; ?>
-    </form>
+            <button type="submit">Agregar Empleo</button>
+            <?php if (isset($errors['general'])): ?><div class="error"><?php echo $errors['general']; ?></div><?php endif; ?>
+        </form>
+    </div>
 </main>
+<?php include '../includes/footer.php'; ?>
 </body>
 </html>
-
-<?php include '../includes/footer.php'; ?>

@@ -1,64 +1,108 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
     margin: 0;
-    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
 }
 
+body {
+    background-image: url('../images/rfev.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: relative;
+    z-index: 1000; /* Asegura que el header esté por encima del contenido */
+}
+
+/* Estilos para el contenedor principal */
 main {
-    padding: 20px;
-    margin-left: 250px; /* To make space for the sidebar */
-    transition: margin-left 0.3s;
+    flex: 1; /* Hace que main ocupe el espacio disponible entre el header y el footer */
+    padding-top: 100px; /* Espacio superior para evitar que el contenido quede oculto detrás del header */
+    padding-bottom: 50px; /* Espacio inferior para evitar que el contenido quede oculto detrás del footer */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 0 auto; /* Centra el contenedor principal */
 }
 
+/* Estilo para el encabezado del formulario */
 h2 {
-    text-align: center;
     margin-bottom: 20px;
+    color: black;
 }
 
+/* Estilos del formulario */
 form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 600px;
-    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    padding: 20px;
+    border: 2px solid #6f00f6; /* Bordes en color morado */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-form label {
-    display: block;
+/* Estilos para labels y campos del formulario */
+label {
+    font-weight: bold;
     margin-bottom: 5px;
+    color: black;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #fff; /* Borde inferior */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    color: rgb(111, 0, 246); /* Color del texto */
+    outline: none;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 15px; /* Espacio entre los campos */
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder {
+    color: rgb(0, 0, 0); /* Color del placeholder */
     font-weight: bold;
 }
 
-form input[type="text"],
-form input[type="password"],
-form input[type="email"],
-form input[type="file"] {
-    width: 100%;
+/* Estilos del botón */
+button {
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: rgb(110, 0, 244);
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
+    width: 100%;
 }
 
-form button:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: rgb(111, 0, 246);
 }
 
+/* Estilos de mensajes de error */
 .error {
     color: red;
-    margin-top: -10px;
+    font-size: 12px;
+    margin-top: -8px;
     margin-bottom: 10px;
-    font-size: 14px;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: white; /* Color de texto del footer */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
 }
