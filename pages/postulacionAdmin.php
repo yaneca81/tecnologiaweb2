@@ -13,14 +13,14 @@ $postulaciones = obtenerPostulacionesEnEspera();
     <link rel="stylesheet" href="../assets/css/postulacionAdmin.css">
 </head>
 <body>
-<main>
-    <h2>Administrar Postulaciones</h2>
-    <div class="postulaciones-container">
-        <?php if (count($postulaciones) > 0): ?>
-            <?php foreach ($postulaciones as $postulacion): ?>
-                <div class="postulacion">
-                    <img src="<?php echo htmlspecialchars($postulacion['foto']); ?>" alt="Foto del postulante">
-                    <div class="postulacion-info">
+    <main>
+        <h2>Administrar Postulaciones</h2>
+        <div class="postulaciones-container">
+            <?php if (count($postulaciones) > 0): ?>
+                <?php foreach ($postulaciones as $postulacion): ?>
+                    <div class="postulacion">
+                        <img src="<?php echo htmlspecialchars($postulacion['foto']); ?>" alt="Foto del postulante">
+                        <div class="postulacion-info">
                         <h3><?php echo htmlspecialchars($postulacion['titulo']); ?></h3>
                         <p><?php echo htmlspecialchars($postulacion['nombre']) . ' ' . htmlspecialchars($postulacion['apellido']); ?></p>
                         <p><?php echo htmlspecialchars($postulacion['mensaje']); ?></p>

@@ -24,7 +24,7 @@
 
     <section class="foto-grupo">
         <h3>Foto de integrates del gruo</h3>
-        <img src="../uploads/empleos/sinFondo.jpg" alt="Foto del grupo">
+        <img src="../uploads/empleos/acercade.jpeg" alt="Foto del grupo">
         <div class="integrantes">
             <h3>Integrantes del Grupo</h3>
             <ul>

@@ -1,44 +1,83 @@
-body {
-    font-family: Arial, sans-serif;
+/* Estilos generales */
+html, body {
+    height: 100%; /* Asegura que html y body ocupen toda la altura de la ventana */
     margin: 0;
     padding: 0;
 }
 
-main {
-    padding: 20px;
-    margin-left: 250px; /* To make space for the sidebar */
-    transition: margin-left 0.3s;
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-image: url('../images/rfev.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: white; /* Color de texto blanco por defecto */
 }
 
-main h2 {
+/* Estilo del contenedor principal */
+main {
+    padding: 150px;
+    margin-left: 50px; /* Espacio para la barra lateral */
+    transition: margin-left 0.3s;
+    flex: 1; /* Hace que main ocupe el espacio restante */
+}
+
+/* Estilo del título */
+h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: black;
+    margin-right: 910px;
 }
 
+/* Estilo del párrafo de bienvenida */
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: bold;
+    margin-right: 810px;
+}
+
+/* Estilo del contenedor de gráficos */
 .charts-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 20px;
+    justify-content: center;
 }
 
+/* Estilo del contenedor de cada gráfico */
 .chart-wrapper {
-    width: 45%;
-    margin-bottom: 20px;
-}
-
-.chart-wrapper canvas {
-    max-width: 100%;
-    max-height: 200px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    border: 2px solid #6f00f6; /* Bordes en color morado */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: black;
 }
 
 .chart-wrapper h3 {
-    text-align: center;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
+    color: black;
 }
-/* Estilos para el footer */
+
+/* Estilo del canvas de los gráficos */
+canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo del footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
+    width: 100%;
 }
