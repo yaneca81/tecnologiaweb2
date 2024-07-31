@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.ofertas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.oferta {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.oferta h2 {
+  margin-top: 0;
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.auth-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

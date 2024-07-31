@@ -1,0 +1,11 @@
+SET foreign_key_checks = 0;
+
+DELETE FROM entrevistas;
+DELETE FROM curriculums;
+DELETE FROM candidatos;
+DELETE FROM ofertas_trabajo;
+DELETE FROM empresas;
+DELETE FROM usuarios;
+
+-- Volver a habilitar las restricciones de clave foránea
+SET foreign_key_checks = 1;
