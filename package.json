@@ -1,0 +1,22 @@
+{
+  "name": "web2",
+  "version": "1.0.0",
+  "description": "aprendiendo sass y npm",
+  "main": "index.js",
+  "scripts": {
+   "sass": "sass --watch src/scss:build/css"
+
+
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "GULP"
+  ],
+  "author": "carlos",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}
+
