@@ -1,0 +1,179 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 18px;
+}
+
+header {
+    background: linear-gradient(90deg, #333, #555);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 80px;
+    height: 80px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    color: #ffdd57;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #333;
+    background-color: #ffdd57;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.location {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-description {
+        font-size: 14px;
+    }
+
+    .location {
+        font-size: 12px;
+    }
+}

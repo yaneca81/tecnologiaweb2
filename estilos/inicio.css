@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    font-size: 18px; /* Tamaño de fuente más grande */
+}
+
+main {
+    padding: 20px;
+    margin-top: 80px; /* Asegura que el contenido no se superponga con el header */
+}
+
+.descripcion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.descripcion h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffdd57; /* Color dorado */
+}
+
+.descripcion p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ccc; /* Texto más claro para mayor legibilidad */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.repuestos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.repuesto-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #333;
+}
+
+.repuesto-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.repuesto-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.repuesto-card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.repuesto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+}

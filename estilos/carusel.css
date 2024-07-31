@@ -1,0 +1,64 @@
+/* Estilos para la sección de descripción */
+.descripcion {
+    background-color: #fff; /* Fondo blanco para destacar el contenido */
+    padding: 40px 20px; /* Espaciado interno para mayor claridad */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 40px auto; /* Centra el contenedor horizontalmente y agrega margen vertical */
+    border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para efecto de profundidad */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+.descripcion h2 {
+    font-size: 2.5em; /* Tamaño de fuente grande para el título */
+    color: #333; /* Color del texto para el título */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.descripcion p {
+    font-size: 1.2em; /* Tamaño de fuente más grande para el texto */
+    color: #666; /* Color del texto para una lectura más cómoda */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+    margin: 0; /* Elimina márgenes por defecto del párrafo */
+}
+
+/* Estilos para la sección de repuestos */
+.repuestos {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.repuestos h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.repuesto-card {
+    display: inline-block;
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.repuesto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.repuesto-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.repuesto-card p {
+    font-size: 1em;
+    color: #666;
+}
