@@ -6,7 +6,4 @@ Tecnologias a aplicar
 * php
 * javaScript
 * base de datos mysql
-## 55% de avance
-## proximos cambios
-* agregar vr perfil
-* Dashboard
+## 70% de avance
