@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let deleteUrl = "";
 
     function confirmarEliminacion(id) {
-        deleteUrl = `usuarioAdmin.php?eliminar=${id}`;
+        deleteUrl = `../pages/usuarioAdmin.php?eliminar=${id}`;
         modal.style.display = "block";
     }
 

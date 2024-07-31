@@ -15,7 +15,7 @@ body {
 /* Estilos para el contenido principal */
 main {
     margin-top: 150px; /* Ajusta el margen superior para evitar que el contenido quede oculto detrás del header */
-    padding: 20px;
+    padding: 80px;
     background-color: rgba(65, 40, 96, 0.8); /* Fondo con color semi-transparente */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);

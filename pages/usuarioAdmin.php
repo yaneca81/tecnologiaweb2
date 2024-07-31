@@ -5,11 +5,13 @@ include '../logic/usuarioAdminLogic.php';
 $usuariosAdmin = obtenerUsuariosAdmin();
 $usuariosEstudiantes = obtenerUsuariosEstudiantes();
 
+
 if (isset($_GET['eliminar'])) {
     eliminarUsuario($_GET['eliminar']);
     header('Location: usuarioAdmin.php');
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -58,9 +60,9 @@ if (isset($_GET['eliminar'])) {
                             <p><?php echo htmlspecialchars($usuario['nombre']) . ' ' . htmlspecialchars($usuario['apellido']); ?></p>
                             <p><?php echo htmlspecialchars($usuario['correo']); ?></p>
                         </div>
-                        <div class="usuario-acciones">
-                            <button class="button eliminar" onclick="confirmarEliminacion(<?php echo $usuario['id']; ?>)">Eliminar</button>
-                        </div>
+                        <!--div class="usuario-acciones">
+                            <button class="button eliminar" onclick="confirmarEliminacion()">Eliminar</button>
+                        </!--div-->
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
