@@ -3,12 +3,18 @@ include '../includes/header_admin.php';
 include '../logic/empleosAdminLogic.php';
 
 $categorias = ['Tecnología', 'Salud', 'Educación', 'Administración', 'Comercio'];
+$tipos = ['medio tiempo', 'tiempo completo', 'mediotiempo y timepo completo'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = trim($_POST['titulo']);
     $descripcion = trim($_POST['descripcion']);
     $categoria = trim($_POST['categoria']);
+    $tipo = isset($_POST['tipo']) ? $_POST['tipo'] : '';
     $foto = $_FILES['foto'];
+
+    if($tipo == $tipos[2]){
+        $tipo = 'mediotiempo|timepo completo';
+    }
 
     $errors = [];
 
@@ -20,6 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (empty($categoria) || !in_array($categoria, $categorias)) {
         $errors['categoria'] = "La categoría es obligatoria.";
+    }
+    if (empty($tipo)) {
+        $errors['tipo'] = "Debe seleccionar al menos un tipo de trabajo.";
     }
 
     $fotoPath = '../uploads/empleos/sinFondo.jpg';
@@ -36,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
-        if (agregarEmpleo($titulo, $descripcion, $categoria, $fotoPath)) {
+        if (agregarEmpleo($titulo, $descripcion, $categoria, $tipo, $fotoPath)) {
             header('Location: empleosAdmin.php');
             exit();
         } else {
@@ -74,6 +83,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endforeach; ?>
         </select>
         <?php if (isset($errors['categoria'])): ?><div class="error"><?php echo $errors['categoria']; ?></div><?php endif; ?>
+
+        <label for="tipo">Tipo de Trabajo:</label>
+        <select id="tipo" name="tipo[]" required>
+            <?php foreach ($tipos as $tip): ?>
+                <option value="<?php echo $tip; ?>" <?php echo isset($_POST['tipo']) && in_array($tip, $_POST['tipo']) ? 'selected' : ''; ?>><?php echo $tip; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <?php if (isset($errors['tipo'])): ?><div class="error"><?php echo $errors['tipo']; ?></div><?php endif; ?>
 
         <label for="foto">Foto:</label>
         <input type="file" id="foto" name="foto">

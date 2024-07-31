@@ -78,4 +78,10 @@ ADD COLUMN `archivo` varchar(255) NOT NULL AFTER `fecha`;
 ALTER TABLE `postulacion`
 ADD COLUMN `mensaje` varchar(220) NOT NULL AFTER `archivo`;
 
+
+--new update sql table empleo add colum horario
+-- vac
+ALTER TABLE `empleo`
+ADD COLUMN `horario` varchar(70) NOT NULL;
+
 -- base de datos actualizada
