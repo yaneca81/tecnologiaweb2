@@ -85,11 +85,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </select>
             <?php if (isset($errors['categoria'])): ?><div class="error"><?php echo $errors['categoria']; ?></div><?php endif; ?>
 
-<<<<<<< HEAD
-            <label for="foto">Foto:</label>
-            <input type="file" id="foto" name="foto">
-            <?php if (isset($errors['foto'])): ?><div class="error"><?php echo $errors['foto']; ?></div><?php endif; ?>
-=======
         <label for="tipo">Tipo de Trabajo:</label>
         <select id="tipo" name="tipo[]" required>
             <?php foreach ($tipos as $tip): ?>
@@ -101,7 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="foto">Foto:</label>
         <input type="file" id="foto" name="foto">
         <?php if (isset($errors['foto'])): ?><div class="error"><?php echo $errors['foto']; ?></div><?php endif; ?>
->>>>>>> d7bc4fadf6cbf3090f13527cfe79131e2d7dfb82
 
             <button type="submit">Agregar Empleo</button>
             <?php if (isset($errors['general'])): ?><div class="error"><?php echo $errors['general']; ?></div><?php endif; ?>
